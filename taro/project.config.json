@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "dist/",
+  "projectname": "geo-atlas-taro",
+  "description": "GeoAtlas Taro App",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "geo-atlas-taro",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:weapp": "taro build --type weapp --watch",
+    "dev:h5": "taro build --type h5 --watch",
+    "build:weapp": "taro build --type weapp",
+    "build:h5": "taro build --type h5"
+  },
+  "dependencies": {
+    "@tarojs/components": "^4.1.2",
+    "@tarojs/react": "^4.1.2",
+    "@tarojs/runtime": "^4.1.2",
+    "@tarojs/taro": "^4.1.2",
+    "d3-geo": "^3.1.1",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "topojson-client": "^3.1.0"
+  },
+  "devDependencies": {
+    "@tarojs/plugin-framework-react": "^4.1.2",
+    "@tarojs/webpack5-runner": "^4.1.2",
+    "@types/geojson": "^7946.0.16",
+    "@types/react": "^19.2.1",
+    "@types/react-dom": "^19.2.1",
+    "typescript": "5.6.3"
+  }
+}
