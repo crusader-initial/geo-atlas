@@ -1,60 +1,45 @@
-import React, { useState, useMemo } from 'react';
-import { MapContainer } from '@/components/MapContainer';
-import { useMapLevel } from '@/hooks/useMapLevel';
-import { getPOIsByRegion } from '@/data/pois';
-import { ArrowLeft, Map as MapIcon, Globe, Train, Landmark, Mountain } from 'lucide-react';
+import { MapContainer } from "@/components/MapContainer";
+import PlatformSwitcher from "@/components/PlatformSwitcher";
+import { useMapSelection } from "@/hooks/useMapSelection";
+import { ArrowLeft, Globe, Landmark, Map as MapIcon, Mountain, Train } from "lucide-react";
 
 export default function Home() {
-  const { 
-    currentLevel, 
-    currentDataUrl, 
+  const {
+    currentLevel,
+    currentDataUrl,
     currentRegionName,
-    canGoBack, 
-    drillDown, 
-    goBack, 
-    reset 
-  } = useMapLevel();
-  
-  const [selectedRegion, setSelectedRegion] = useState<any>(null);
-
-  const handleRegionClick = (feature: any) => {
-    // 如果点击的是当前选中的区域，则下钻
-    const id = feature.properties?.id || feature.properties?.code || feature.properties?.adcode;
-    const selectedId = selectedRegion?.properties?.id || selectedRegion?.properties?.code || selectedRegion?.properties?.adcode;
-    
-    if (selectedId === id) {
-      drillDown(feature);
-      setSelectedRegion(null); // 下钻后清除选中状态
-    } else {
-      setSelectedRegion(feature);
-    }
-  };
-
-  // 获取当前选中区域的 POI
-  const regionPOIs = useMemo(() => {
-    if (!selectedRegion) return [];
-    const id = selectedRegion.properties?.id || selectedRegion.properties?.code || selectedRegion.properties?.adcode;
-    return id ? getPOIsByRegion(id) : [];
-  }, [selectedRegion]);
+    canGoBack,
+    handleRegionClick,
+    selectedRegion,
+    selectedRegionId,
+    regionPOIs,
+    goBackAndClear,
+    resetAndClear,
+    drillDownSelected,
+  } = useMapSelection();
 
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-[var(--color-swiss-bg)]">
       {/* 左侧地图区域 */}
       <div className="flex-1 relative">
         <div className="absolute top-6 left-6 z-10">
-          <h1 className="text-3xl font-bold text-[var(--color-swiss-fg)] tracking-tight flex items-center gap-2">
-            <MapIcon className="w-6 h-6" />
-            GeoAtlas
-          </h1>
-          <p className="text-sm text-muted-foreground mt-1 ml-8">Spatial Structure Understanding</p>
+          <div className="flex items-start gap-4">
+            <div>
+              <h1 className="text-3xl font-bold text-[var(--color-swiss-fg)] tracking-tight flex items-center gap-2">
+                <MapIcon className="w-6 h-6" />
+                GeoAtlas
+              </h1>
+              <p className="text-sm text-muted-foreground mt-1 ml-8">Spatial Structure Understanding</p>
+            </div>
+            <PlatformSwitcher />
+          </div>
           
           {/* 面包屑导航 */}
           <div className="flex items-center gap-2 mt-6 ml-1">
             {canGoBack && (
               <button 
                 onClick={() => {
-                  goBack();
-                  setSelectedRegion(null);
+                  goBackAndClear();
                 }}
                 className="p-2 rounded-full bg-white shadow-sm hover:bg-gray-50 transition-colors border border-[var(--color-swiss-border)]"
                 aria-label="Go back"
@@ -72,7 +57,7 @@ export default function Home() {
           dataUrl={currentDataUrl}
           level={currentLevel}
           onRegionClick={handleRegionClick}
-          selectedRegionId={selectedRegion?.properties?.id || selectedRegion?.properties?.code || selectedRegion?.properties?.adcode}
+          selectedRegionId={selectedRegionId}
           pois={regionPOIs}
         />
       </div>
@@ -135,8 +120,7 @@ export default function Home() {
                 <div className="pt-2">
                   <button 
                     onClick={() => {
-                      drillDown(selectedRegion);
-                      setSelectedRegion(null);
+                      drillDownSelected();
                     }}
                     className="w-full py-3 bg-[var(--color-swiss-fg)] text-white text-sm font-medium hover:bg-black transition-colors flex items-center justify-center gap-2"
                   >
@@ -156,8 +140,7 @@ export default function Home() {
             <div className="space-y-2">
               <button 
                 onClick={() => {
-                  reset();
-                  setSelectedRegion(null);
+                  resetAndClear();
                 }}
                 className="w-full px-4 py-3 text-left text-sm border border-[var(--color-swiss-border)] hover:bg-gray-50 transition-colors flex items-center gap-3 group"
               >
