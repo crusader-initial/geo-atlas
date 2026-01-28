@@ -1,8 +1,3 @@
-// src/utils/geoRegistry.ts
-
-import worldChina from '../data/world/china.json';
-import worldJapan from '../data/world/japan.json';
-import worldUsa from '../data/world/usa.json';
 import china from '../data/china/china.json';
 import c110100 from '../data/china/geometryCouties/110100.json';
 import c120100 from '../data/china/geometryCouties/120100.json';
@@ -382,11 +377,11 @@ import p65 from '../data/china/geometryProvince/65.json';
 import p71 from '../data/china/geometryProvince/71.json';
 import p81 from '../data/china/geometryProvince/81.json';
 import p82 from '../data/china/geometryProvince/82.json';
+import world_china from '../data/world/china.json';
+import world_japan from '../data/world/japan.json';
+import world_usa from '../data/world/usa.json';
 
 export const GEO_DATA_MAP: Record<string, any> = {
-  '/data/world/china.json': worldChina,
-  '/data/world/japan.json': worldJapan,
-  '/data/world/usa.json': worldUsa,
   '/data/china/china.json': china,
   '/data/china/geometryCouties/110100.json': c110100,
   '/data/china/geometryCouties/120100.json': c120100,
@@ -766,4 +761,8 @@ export const GEO_DATA_MAP: Record<string, any> = {
   '/data/china/geometryProvince/71.json': p71,
   '/data/china/geometryProvince/81.json': p81,
   '/data/china/geometryProvince/82.json': p82,
+  '/data/world/china.json': world_china,
+  '/data/world/japan.json': world_japan,
+  '/data/world/usa.json': world_usa,
 };
+
