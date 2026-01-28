@@ -4,350 +4,350 @@ import worldChina from '../data/world/china.json';
 import worldJapan from '../data/world/japan.json';
 import worldUsa from '../data/world/usa.json';
 import china from '../data/china/china.json';
-import c110100 from '../data/china/geometryCouties/110100.json';
-import c120100 from '../data/china/geometryCouties/120100.json';
-import c130100 from '../data/china/geometryCouties/130100.json';
-import c130200 from '../data/china/geometryCouties/130200.json';
-import c130300 from '../data/china/geometryCouties/130300.json';
-import c130400 from '../data/china/geometryCouties/130400.json';
-import c130500 from '../data/china/geometryCouties/130500.json';
-import c130600 from '../data/china/geometryCouties/130600.json';
-import c130700 from '../data/china/geometryCouties/130700.json';
-import c130800 from '../data/china/geometryCouties/130800.json';
-import c130900 from '../data/china/geometryCouties/130900.json';
-import c131000 from '../data/china/geometryCouties/131000.json';
-import c131100 from '../data/china/geometryCouties/131100.json';
-import c140100 from '../data/china/geometryCouties/140100.json';
-import c140200 from '../data/china/geometryCouties/140200.json';
-import c140300 from '../data/china/geometryCouties/140300.json';
-import c140400 from '../data/china/geometryCouties/140400.json';
-import c140500 from '../data/china/geometryCouties/140500.json';
-import c140600 from '../data/china/geometryCouties/140600.json';
-import c140700 from '../data/china/geometryCouties/140700.json';
-import c140800 from '../data/china/geometryCouties/140800.json';
-import c140900 from '../data/china/geometryCouties/140900.json';
-import c141000 from '../data/china/geometryCouties/141000.json';
-import c141100 from '../data/china/geometryCouties/141100.json';
-import c150100 from '../data/china/geometryCouties/150100.json';
-import c150200 from '../data/china/geometryCouties/150200.json';
-import c150300 from '../data/china/geometryCouties/150300.json';
-import c150400 from '../data/china/geometryCouties/150400.json';
-import c150500 from '../data/china/geometryCouties/150500.json';
-import c150600 from '../data/china/geometryCouties/150600.json';
-import c150700 from '../data/china/geometryCouties/150700.json';
-import c150800 from '../data/china/geometryCouties/150800.json';
-import c150900 from '../data/china/geometryCouties/150900.json';
-import c152200 from '../data/china/geometryCouties/152200.json';
-import c152500 from '../data/china/geometryCouties/152500.json';
-import c152900 from '../data/china/geometryCouties/152900.json';
-import c210100 from '../data/china/geometryCouties/210100.json';
-import c210200 from '../data/china/geometryCouties/210200.json';
-import c210300 from '../data/china/geometryCouties/210300.json';
-import c210400 from '../data/china/geometryCouties/210400.json';
-import c210500 from '../data/china/geometryCouties/210500.json';
-import c210600 from '../data/china/geometryCouties/210600.json';
-import c210700 from '../data/china/geometryCouties/210700.json';
-import c210800 from '../data/china/geometryCouties/210800.json';
-import c210900 from '../data/china/geometryCouties/210900.json';
-import c211000 from '../data/china/geometryCouties/211000.json';
-import c211100 from '../data/china/geometryCouties/211100.json';
-import c211200 from '../data/china/geometryCouties/211200.json';
-import c211300 from '../data/china/geometryCouties/211300.json';
-import c211400 from '../data/china/geometryCouties/211400.json';
-import c220100 from '../data/china/geometryCouties/220100.json';
-import c220200 from '../data/china/geometryCouties/220200.json';
-import c220300 from '../data/china/geometryCouties/220300.json';
-import c220400 from '../data/china/geometryCouties/220400.json';
-import c220500 from '../data/china/geometryCouties/220500.json';
-import c220600 from '../data/china/geometryCouties/220600.json';
-import c220700 from '../data/china/geometryCouties/220700.json';
-import c220800 from '../data/china/geometryCouties/220800.json';
-import c222400 from '../data/china/geometryCouties/222400.json';
-import c230100 from '../data/china/geometryCouties/230100.json';
-import c230200 from '../data/china/geometryCouties/230200.json';
-import c230300 from '../data/china/geometryCouties/230300.json';
-import c230400 from '../data/china/geometryCouties/230400.json';
-import c230500 from '../data/china/geometryCouties/230500.json';
-import c230600 from '../data/china/geometryCouties/230600.json';
-import c230700 from '../data/china/geometryCouties/230700.json';
-import c230800 from '../data/china/geometryCouties/230800.json';
-import c230900 from '../data/china/geometryCouties/230900.json';
-import c231000 from '../data/china/geometryCouties/231000.json';
-import c231100 from '../data/china/geometryCouties/231100.json';
-import c231200 from '../data/china/geometryCouties/231200.json';
-import c232700 from '../data/china/geometryCouties/232700.json';
-import c310100 from '../data/china/geometryCouties/310100.json';
-import c310200 from '../data/china/geometryCouties/310200.json';
-import c320100 from '../data/china/geometryCouties/320100.json';
-import c320200 from '../data/china/geometryCouties/320200.json';
-import c320300 from '../data/china/geometryCouties/320300.json';
-import c320400 from '../data/china/geometryCouties/320400.json';
-import c320500 from '../data/china/geometryCouties/320500.json';
-import c320600 from '../data/china/geometryCouties/320600.json';
-import c320700 from '../data/china/geometryCouties/320700.json';
-import c320800 from '../data/china/geometryCouties/320800.json';
-import c320900 from '../data/china/geometryCouties/320900.json';
-import c321000 from '../data/china/geometryCouties/321000.json';
-import c321100 from '../data/china/geometryCouties/321100.json';
-import c321200 from '../data/china/geometryCouties/321200.json';
-import c321300 from '../data/china/geometryCouties/321300.json';
-import c330100 from '../data/china/geometryCouties/330100.json';
-import c330200 from '../data/china/geometryCouties/330200.json';
-import c330300 from '../data/china/geometryCouties/330300.json';
-import c330400 from '../data/china/geometryCouties/330400.json';
-import c330500 from '../data/china/geometryCouties/330500.json';
-import c330600 from '../data/china/geometryCouties/330600.json';
-import c330700 from '../data/china/geometryCouties/330700.json';
-import c330800 from '../data/china/geometryCouties/330800.json';
-import c330900 from '../data/china/geometryCouties/330900.json';
-import c331000 from '../data/china/geometryCouties/331000.json';
-import c331100 from '../data/china/geometryCouties/331100.json';
-import c340100 from '../data/china/geometryCouties/340100.json';
-import c340200 from '../data/china/geometryCouties/340200.json';
-import c340300 from '../data/china/geometryCouties/340300.json';
-import c340400 from '../data/china/geometryCouties/340400.json';
-import c340500 from '../data/china/geometryCouties/340500.json';
-import c340600 from '../data/china/geometryCouties/340600.json';
-import c340700 from '../data/china/geometryCouties/340700.json';
-import c340800 from '../data/china/geometryCouties/340800.json';
-import c341000 from '../data/china/geometryCouties/341000.json';
-import c341100 from '../data/china/geometryCouties/341100.json';
-import c341200 from '../data/china/geometryCouties/341200.json';
-import c341300 from '../data/china/geometryCouties/341300.json';
-import c341500 from '../data/china/geometryCouties/341500.json';
-import c341600 from '../data/china/geometryCouties/341600.json';
-import c341700 from '../data/china/geometryCouties/341700.json';
-import c341800 from '../data/china/geometryCouties/341800.json';
-import c350100 from '../data/china/geometryCouties/350100.json';
-import c350200 from '../data/china/geometryCouties/350200.json';
-import c350300 from '../data/china/geometryCouties/350300.json';
-import c350400 from '../data/china/geometryCouties/350400.json';
-import c350500 from '../data/china/geometryCouties/350500.json';
-import c350600 from '../data/china/geometryCouties/350600.json';
-import c350700 from '../data/china/geometryCouties/350700.json';
-import c350800 from '../data/china/geometryCouties/350800.json';
-import c350900 from '../data/china/geometryCouties/350900.json';
-import c360100 from '../data/china/geometryCouties/360100.json';
-import c360200 from '../data/china/geometryCouties/360200.json';
-import c360300 from '../data/china/geometryCouties/360300.json';
-import c360400 from '../data/china/geometryCouties/360400.json';
-import c360500 from '../data/china/geometryCouties/360500.json';
-import c360600 from '../data/china/geometryCouties/360600.json';
-import c360700 from '../data/china/geometryCouties/360700.json';
-import c360800 from '../data/china/geometryCouties/360800.json';
-import c360900 from '../data/china/geometryCouties/360900.json';
-import c361000 from '../data/china/geometryCouties/361000.json';
-import c361100 from '../data/china/geometryCouties/361100.json';
-import c370100 from '../data/china/geometryCouties/370100.json';
-import c370200 from '../data/china/geometryCouties/370200.json';
-import c370300 from '../data/china/geometryCouties/370300.json';
-import c370400 from '../data/china/geometryCouties/370400.json';
-import c370500 from '../data/china/geometryCouties/370500.json';
-import c370600 from '../data/china/geometryCouties/370600.json';
-import c370700 from '../data/china/geometryCouties/370700.json';
-import c370800 from '../data/china/geometryCouties/370800.json';
-import c370900 from '../data/china/geometryCouties/370900.json';
-import c371000 from '../data/china/geometryCouties/371000.json';
-import c371100 from '../data/china/geometryCouties/371100.json';
-import c371200 from '../data/china/geometryCouties/371200.json';
-import c371300 from '../data/china/geometryCouties/371300.json';
-import c371400 from '../data/china/geometryCouties/371400.json';
-import c371500 from '../data/china/geometryCouties/371500.json';
-import c371600 from '../data/china/geometryCouties/371600.json';
-import c371700 from '../data/china/geometryCouties/371700.json';
-import c410100 from '../data/china/geometryCouties/410100.json';
-import c410200 from '../data/china/geometryCouties/410200.json';
-import c410300 from '../data/china/geometryCouties/410300.json';
-import c410400 from '../data/china/geometryCouties/410400.json';
-import c410500 from '../data/china/geometryCouties/410500.json';
-import c410600 from '../data/china/geometryCouties/410600.json';
-import c410700 from '../data/china/geometryCouties/410700.json';
-import c410800 from '../data/china/geometryCouties/410800.json';
-import c410900 from '../data/china/geometryCouties/410900.json';
-import c411000 from '../data/china/geometryCouties/411000.json';
-import c411100 from '../data/china/geometryCouties/411100.json';
-import c411200 from '../data/china/geometryCouties/411200.json';
-import c411300 from '../data/china/geometryCouties/411300.json';
-import c411400 from '../data/china/geometryCouties/411400.json';
-import c411500 from '../data/china/geometryCouties/411500.json';
-import c411600 from '../data/china/geometryCouties/411600.json';
-import c411700 from '../data/china/geometryCouties/411700.json';
-import c420100 from '../data/china/geometryCouties/420100.json';
-import c420200 from '../data/china/geometryCouties/420200.json';
-import c420300 from '../data/china/geometryCouties/420300.json';
-import c420500 from '../data/china/geometryCouties/420500.json';
-import c420600 from '../data/china/geometryCouties/420600.json';
-import c420700 from '../data/china/geometryCouties/420700.json';
-import c420800 from '../data/china/geometryCouties/420800.json';
-import c420900 from '../data/china/geometryCouties/420900.json';
-import c421000 from '../data/china/geometryCouties/421000.json';
-import c421100 from '../data/china/geometryCouties/421100.json';
-import c421200 from '../data/china/geometryCouties/421200.json';
-import c421300 from '../data/china/geometryCouties/421300.json';
-import c422800 from '../data/china/geometryCouties/422800.json';
-import c429000 from '../data/china/geometryCouties/429000.json';
-import c430100 from '../data/china/geometryCouties/430100.json';
-import c430200 from '../data/china/geometryCouties/430200.json';
-import c430300 from '../data/china/geometryCouties/430300.json';
-import c430400 from '../data/china/geometryCouties/430400.json';
-import c430500 from '../data/china/geometryCouties/430500.json';
-import c430600 from '../data/china/geometryCouties/430600.json';
-import c430700 from '../data/china/geometryCouties/430700.json';
-import c430800 from '../data/china/geometryCouties/430800.json';
-import c430900 from '../data/china/geometryCouties/430900.json';
-import c431000 from '../data/china/geometryCouties/431000.json';
-import c431100 from '../data/china/geometryCouties/431100.json';
-import c431200 from '../data/china/geometryCouties/431200.json';
-import c431300 from '../data/china/geometryCouties/431300.json';
-import c433100 from '../data/china/geometryCouties/433100.json';
-import c440100 from '../data/china/geometryCouties/440100.json';
-import c440200 from '../data/china/geometryCouties/440200.json';
-import c440300 from '../data/china/geometryCouties/440300.json';
-import c440400 from '../data/china/geometryCouties/440400.json';
-import c440500 from '../data/china/geometryCouties/440500.json';
-import c440600 from '../data/china/geometryCouties/440600.json';
-import c440700 from '../data/china/geometryCouties/440700.json';
-import c440800 from '../data/china/geometryCouties/440800.json';
-import c440900 from '../data/china/geometryCouties/440900.json';
-import c441200 from '../data/china/geometryCouties/441200.json';
-import c441300 from '../data/china/geometryCouties/441300.json';
-import c441400 from '../data/china/geometryCouties/441400.json';
-import c441500 from '../data/china/geometryCouties/441500.json';
-import c441600 from '../data/china/geometryCouties/441600.json';
-import c441700 from '../data/china/geometryCouties/441700.json';
-import c441800 from '../data/china/geometryCouties/441800.json';
-import c441900 from '../data/china/geometryCouties/441900.json';
-import c442000 from '../data/china/geometryCouties/442000.json';
-import c445100 from '../data/china/geometryCouties/445100.json';
-import c445200 from '../data/china/geometryCouties/445200.json';
-import c445300 from '../data/china/geometryCouties/445300.json';
-import c450100 from '../data/china/geometryCouties/450100.json';
-import c450200 from '../data/china/geometryCouties/450200.json';
-import c450300 from '../data/china/geometryCouties/450300.json';
-import c450400 from '../data/china/geometryCouties/450400.json';
-import c450500 from '../data/china/geometryCouties/450500.json';
-import c450600 from '../data/china/geometryCouties/450600.json';
-import c450700 from '../data/china/geometryCouties/450700.json';
-import c450800 from '../data/china/geometryCouties/450800.json';
-import c450900 from '../data/china/geometryCouties/450900.json';
-import c451000 from '../data/china/geometryCouties/451000.json';
-import c451100 from '../data/china/geometryCouties/451100.json';
-import c451200 from '../data/china/geometryCouties/451200.json';
-import c451300 from '../data/china/geometryCouties/451300.json';
-import c451400 from '../data/china/geometryCouties/451400.json';
-import c460100 from '../data/china/geometryCouties/460100.json';
-import c460200 from '../data/china/geometryCouties/460200.json';
-import c460300 from '../data/china/geometryCouties/460300.json';
-import c469000 from '../data/china/geometryCouties/469000.json';
-import c500100 from '../data/china/geometryCouties/500100.json';
-import c510100 from '../data/china/geometryCouties/510100.json';
-import c510300 from '../data/china/geometryCouties/510300.json';
-import c510400 from '../data/china/geometryCouties/510400.json';
-import c510500 from '../data/china/geometryCouties/510500.json';
-import c510600 from '../data/china/geometryCouties/510600.json';
-import c510700 from '../data/china/geometryCouties/510700.json';
-import c510800 from '../data/china/geometryCouties/510800.json';
-import c510900 from '../data/china/geometryCouties/510900.json';
-import c511000 from '../data/china/geometryCouties/511000.json';
-import c511100 from '../data/china/geometryCouties/511100.json';
-import c511300 from '../data/china/geometryCouties/511300.json';
-import c511400 from '../data/china/geometryCouties/511400.json';
-import c511500 from '../data/china/geometryCouties/511500.json';
-import c511600 from '../data/china/geometryCouties/511600.json';
-import c511700 from '../data/china/geometryCouties/511700.json';
-import c511800 from '../data/china/geometryCouties/511800.json';
-import c511900 from '../data/china/geometryCouties/511900.json';
-import c512000 from '../data/china/geometryCouties/512000.json';
-import c513200 from '../data/china/geometryCouties/513200.json';
-import c513300 from '../data/china/geometryCouties/513300.json';
-import c513400 from '../data/china/geometryCouties/513400.json';
-import c520100 from '../data/china/geometryCouties/520100.json';
-import c520200 from '../data/china/geometryCouties/520200.json';
-import c520300 from '../data/china/geometryCouties/520300.json';
-import c520400 from '../data/china/geometryCouties/520400.json';
-import c522200 from '../data/china/geometryCouties/522200.json';
-import c522300 from '../data/china/geometryCouties/522300.json';
-import c522400 from '../data/china/geometryCouties/522400.json';
-import c522600 from '../data/china/geometryCouties/522600.json';
-import c522700 from '../data/china/geometryCouties/522700.json';
-import c530100 from '../data/china/geometryCouties/530100.json';
-import c530300 from '../data/china/geometryCouties/530300.json';
-import c530400 from '../data/china/geometryCouties/530400.json';
-import c530500 from '../data/china/geometryCouties/530500.json';
-import c530600 from '../data/china/geometryCouties/530600.json';
-import c530700 from '../data/china/geometryCouties/530700.json';
-import c530800 from '../data/china/geometryCouties/530800.json';
-import c530900 from '../data/china/geometryCouties/530900.json';
-import c532300 from '../data/china/geometryCouties/532300.json';
-import c532500 from '../data/china/geometryCouties/532500.json';
-import c532600 from '../data/china/geometryCouties/532600.json';
-import c532800 from '../data/china/geometryCouties/532800.json';
-import c532900 from '../data/china/geometryCouties/532900.json';
-import c533100 from '../data/china/geometryCouties/533100.json';
-import c533300 from '../data/china/geometryCouties/533300.json';
-import c533400 from '../data/china/geometryCouties/533400.json';
-import c540100 from '../data/china/geometryCouties/540100.json';
-import c542100 from '../data/china/geometryCouties/542100.json';
-import c542200 from '../data/china/geometryCouties/542200.json';
-import c542300 from '../data/china/geometryCouties/542300.json';
-import c542400 from '../data/china/geometryCouties/542400.json';
-import c542500 from '../data/china/geometryCouties/542500.json';
-import c542600 from '../data/china/geometryCouties/542600.json';
-import c610100 from '../data/china/geometryCouties/610100.json';
-import c610200 from '../data/china/geometryCouties/610200.json';
-import c610300 from '../data/china/geometryCouties/610300.json';
-import c610400 from '../data/china/geometryCouties/610400.json';
-import c610500 from '../data/china/geometryCouties/610500.json';
-import c610600 from '../data/china/geometryCouties/610600.json';
-import c610700 from '../data/china/geometryCouties/610700.json';
-import c610800 from '../data/china/geometryCouties/610800.json';
-import c610900 from '../data/china/geometryCouties/610900.json';
-import c611000 from '../data/china/geometryCouties/611000.json';
-import c620100 from '../data/china/geometryCouties/620100.json';
-import c620200 from '../data/china/geometryCouties/620200.json';
-import c620300 from '../data/china/geometryCouties/620300.json';
-import c620400 from '../data/china/geometryCouties/620400.json';
-import c620500 from '../data/china/geometryCouties/620500.json';
-import c620600 from '../data/china/geometryCouties/620600.json';
-import c620700 from '../data/china/geometryCouties/620700.json';
-import c620800 from '../data/china/geometryCouties/620800.json';
-import c620900 from '../data/china/geometryCouties/620900.json';
-import c621000 from '../data/china/geometryCouties/621000.json';
-import c621100 from '../data/china/geometryCouties/621100.json';
-import c621200 from '../data/china/geometryCouties/621200.json';
-import c622900 from '../data/china/geometryCouties/622900.json';
-import c623000 from '../data/china/geometryCouties/623000.json';
-import c630100 from '../data/china/geometryCouties/630100.json';
-import c632100 from '../data/china/geometryCouties/632100.json';
-import c632200 from '../data/china/geometryCouties/632200.json';
-import c632300 from '../data/china/geometryCouties/632300.json';
-import c632500 from '../data/china/geometryCouties/632500.json';
-import c632600 from '../data/china/geometryCouties/632600.json';
-import c632700 from '../data/china/geometryCouties/632700.json';
-import c632800 from '../data/china/geometryCouties/632800.json';
-import c640100 from '../data/china/geometryCouties/640100.json';
-import c640200 from '../data/china/geometryCouties/640200.json';
-import c640300 from '../data/china/geometryCouties/640300.json';
-import c640400 from '../data/china/geometryCouties/640400.json';
-import c640500 from '../data/china/geometryCouties/640500.json';
-import c650100 from '../data/china/geometryCouties/650100.json';
-import c650200 from '../data/china/geometryCouties/650200.json';
-import c652100 from '../data/china/geometryCouties/652100.json';
-import c652200 from '../data/china/geometryCouties/652200.json';
-import c652300 from '../data/china/geometryCouties/652300.json';
-import c652700 from '../data/china/geometryCouties/652700.json';
-import c652800 from '../data/china/geometryCouties/652800.json';
-import c652900 from '../data/china/geometryCouties/652900.json';
-import c653000 from '../data/china/geometryCouties/653000.json';
-import c653100 from '../data/china/geometryCouties/653100.json';
-import c653200 from '../data/china/geometryCouties/653200.json';
-import c654000 from '../data/china/geometryCouties/654000.json';
-import c654200 from '../data/china/geometryCouties/654200.json';
-import c654300 from '../data/china/geometryCouties/654300.json';
-import c659000 from '../data/china/geometryCouties/659000.json';
-import c710000 from '../data/china/geometryCouties/710000.json';
-import c810100 from '../data/china/geometryCouties/810100.json';
-import c820000 from '../data/china/geometryCouties/820000.json';
+import c1101 from '../data/china/geometryCouties/1101.json';
+import c1201 from '../data/china/geometryCouties/1201.json';
+import c1301 from '../data/china/geometryCouties/1301.json';
+import c1302 from '../data/china/geometryCouties/1302.json';
+import c1303 from '../data/china/geometryCouties/1303.json';
+import c1304 from '../data/china/geometryCouties/1304.json';
+import c1305 from '../data/china/geometryCouties/1305.json';
+import c1306 from '../data/china/geometryCouties/1306.json';
+import c1307 from '../data/china/geometryCouties/1307.json';
+import c1308 from '../data/china/geometryCouties/1308.json';
+import c1309 from '../data/china/geometryCouties/1309.json';
+import c1310 from '../data/china/geometryCouties/1310.json';
+import c1311 from '../data/china/geometryCouties/1311.json';
+import c1401 from '../data/china/geometryCouties/1401.json';
+import c1402 from '../data/china/geometryCouties/1402.json';
+import c1403 from '../data/china/geometryCouties/1403.json';
+import c1404 from '../data/china/geometryCouties/1404.json';
+import c1405 from '../data/china/geometryCouties/1405.json';
+import c1406 from '../data/china/geometryCouties/1406.json';
+import c1407 from '../data/china/geometryCouties/1407.json';
+import c1408 from '../data/china/geometryCouties/1408.json';
+import c1409 from '../data/china/geometryCouties/1409.json';
+import c1410 from '../data/china/geometryCouties/1410.json';
+import c1411 from '../data/china/geometryCouties/1411.json';
+import c1501 from '../data/china/geometryCouties/1501.json';
+import c1502 from '../data/china/geometryCouties/1502.json';
+import c1503 from '../data/china/geometryCouties/1503.json';
+import c1504 from '../data/china/geometryCouties/1504.json';
+import c1505 from '../data/china/geometryCouties/1505.json';
+import c1506 from '../data/china/geometryCouties/1506.json';
+import c1507 from '../data/china/geometryCouties/1507.json';
+import c1508 from '../data/china/geometryCouties/1508.json';
+import c1509 from '../data/china/geometryCouties/1509.json';
+import c1522 from '../data/china/geometryCouties/1522.json';
+import c1525 from '../data/china/geometryCouties/1525.json';
+import c1529 from '../data/china/geometryCouties/1529.json';
+import c2101 from '../data/china/geometryCouties/2101.json';
+import c2102 from '../data/china/geometryCouties/2102.json';
+import c2103 from '../data/china/geometryCouties/2103.json';
+import c2104 from '../data/china/geometryCouties/2104.json';
+import c2105 from '../data/china/geometryCouties/2105.json';
+import c2106 from '../data/china/geometryCouties/2106.json';
+import c2107 from '../data/china/geometryCouties/2107.json';
+import c2108 from '../data/china/geometryCouties/2108.json';
+import c2109 from '../data/china/geometryCouties/2109.json';
+import c2110 from '../data/china/geometryCouties/2110.json';
+import c2111 from '../data/china/geometryCouties/2111.json';
+import c2112 from '../data/china/geometryCouties/2112.json';
+import c2113 from '../data/china/geometryCouties/2113.json';
+import c2114 from '../data/china/geometryCouties/2114.json';
+import c2201 from '../data/china/geometryCouties/2201.json';
+import c2202 from '../data/china/geometryCouties/2202.json';
+import c2203 from '../data/china/geometryCouties/2203.json';
+import c2204 from '../data/china/geometryCouties/2204.json';
+import c2205 from '../data/china/geometryCouties/2205.json';
+import c2206 from '../data/china/geometryCouties/2206.json';
+import c2207 from '../data/china/geometryCouties/2207.json';
+import c2208 from '../data/china/geometryCouties/2208.json';
+import c2224 from '../data/china/geometryCouties/2224.json';
+import c2301 from '../data/china/geometryCouties/2301.json';
+import c2302 from '../data/china/geometryCouties/2302.json';
+import c2303 from '../data/china/geometryCouties/2303.json';
+import c2304 from '../data/china/geometryCouties/2304.json';
+import c2305 from '../data/china/geometryCouties/2305.json';
+import c2306 from '../data/china/geometryCouties/2306.json';
+import c2307 from '../data/china/geometryCouties/2307.json';
+import c2308 from '../data/china/geometryCouties/2308.json';
+import c2309 from '../data/china/geometryCouties/2309.json';
+import c2310 from '../data/china/geometryCouties/2310.json';
+import c2311 from '../data/china/geometryCouties/2311.json';
+import c2312 from '../data/china/geometryCouties/2312.json';
+import c2327 from '../data/china/geometryCouties/2327.json';
+import c3101 from '../data/china/geometryCouties/3101.json';
+import c3102 from '../data/china/geometryCouties/3102.json';
+import c3201 from '../data/china/geometryCouties/3201.json';
+import c3202 from '../data/china/geometryCouties/3202.json';
+import c3203 from '../data/china/geometryCouties/3203.json';
+import c3204 from '../data/china/geometryCouties/3204.json';
+import c3205 from '../data/china/geometryCouties/3205.json';
+import c3206 from '../data/china/geometryCouties/3206.json';
+import c3207 from '../data/china/geometryCouties/3207.json';
+import c3208 from '../data/china/geometryCouties/3208.json';
+import c3209 from '../data/china/geometryCouties/3209.json';
+import c3210 from '../data/china/geometryCouties/3210.json';
+import c3211 from '../data/china/geometryCouties/3211.json';
+import c3212 from '../data/china/geometryCouties/3212.json';
+import c3213 from '../data/china/geometryCouties/3213.json';
+import c3301 from '../data/china/geometryCouties/3301.json';
+import c3302 from '../data/china/geometryCouties/3302.json';
+import c3303 from '../data/china/geometryCouties/3303.json';
+import c3304 from '../data/china/geometryCouties/3304.json';
+import c3305 from '../data/china/geometryCouties/3305.json';
+import c3306 from '../data/china/geometryCouties/3306.json';
+import c3307 from '../data/china/geometryCouties/3307.json';
+import c3308 from '../data/china/geometryCouties/3308.json';
+import c3309 from '../data/china/geometryCouties/3309.json';
+import c3310 from '../data/china/geometryCouties/3310.json';
+import c3311 from '../data/china/geometryCouties/3311.json';
+import c3401 from '../data/china/geometryCouties/3401.json';
+import c3402 from '../data/china/geometryCouties/3402.json';
+import c3403 from '../data/china/geometryCouties/3403.json';
+import c3404 from '../data/china/geometryCouties/3404.json';
+import c3405 from '../data/china/geometryCouties/3405.json';
+import c3406 from '../data/china/geometryCouties/3406.json';
+import c3407 from '../data/china/geometryCouties/3407.json';
+import c3408 from '../data/china/geometryCouties/3408.json';
+import c3410 from '../data/china/geometryCouties/3410.json';
+import c3411 from '../data/china/geometryCouties/3411.json';
+import c3412 from '../data/china/geometryCouties/3412.json';
+import c3413 from '../data/china/geometryCouties/3413.json';
+import c3415 from '../data/china/geometryCouties/3415.json';
+import c3416 from '../data/china/geometryCouties/3416.json';
+import c3417 from '../data/china/geometryCouties/3417.json';
+import c3418 from '../data/china/geometryCouties/3418.json';
+import c3501 from '../data/china/geometryCouties/3501.json';
+import c3502 from '../data/china/geometryCouties/3502.json';
+import c3503 from '../data/china/geometryCouties/3503.json';
+import c3504 from '../data/china/geometryCouties/3504.json';
+import c3505 from '../data/china/geometryCouties/3505.json';
+import c3506 from '../data/china/geometryCouties/3506.json';
+import c3507 from '../data/china/geometryCouties/3507.json';
+import c3508 from '../data/china/geometryCouties/3508.json';
+import c3509 from '../data/china/geometryCouties/3509.json';
+import c3601 from '../data/china/geometryCouties/3601.json';
+import c3602 from '../data/china/geometryCouties/3602.json';
+import c3603 from '../data/china/geometryCouties/3603.json';
+import c3604 from '../data/china/geometryCouties/3604.json';
+import c3605 from '../data/china/geometryCouties/3605.json';
+import c3606 from '../data/china/geometryCouties/3606.json';
+import c3607 from '../data/china/geometryCouties/3607.json';
+import c3608 from '../data/china/geometryCouties/3608.json';
+import c3609 from '../data/china/geometryCouties/3609.json';
+import c3610 from '../data/china/geometryCouties/3610.json';
+import c3611 from '../data/china/geometryCouties/3611.json';
+import c3701 from '../data/china/geometryCouties/3701.json';
+import c3702 from '../data/china/geometryCouties/3702.json';
+import c3703 from '../data/china/geometryCouties/3703.json';
+import c3704 from '../data/china/geometryCouties/3704.json';
+import c3705 from '../data/china/geometryCouties/3705.json';
+import c3706 from '../data/china/geometryCouties/3706.json';
+import c3707 from '../data/china/geometryCouties/3707.json';
+import c3708 from '../data/china/geometryCouties/3708.json';
+import c3709 from '../data/china/geometryCouties/3709.json';
+import c3710 from '../data/china/geometryCouties/3710.json';
+import c3711 from '../data/china/geometryCouties/3711.json';
+import c3712 from '../data/china/geometryCouties/3712.json';
+import c3713 from '../data/china/geometryCouties/3713.json';
+import c3714 from '../data/china/geometryCouties/3714.json';
+import c3715 from '../data/china/geometryCouties/3715.json';
+import c3716 from '../data/china/geometryCouties/3716.json';
+import c3717 from '../data/china/geometryCouties/3717.json';
+import c4101 from '../data/china/geometryCouties/4101.json';
+import c4102 from '../data/china/geometryCouties/4102.json';
+import c4103 from '../data/china/geometryCouties/4103.json';
+import c4104 from '../data/china/geometryCouties/4104.json';
+import c4105 from '../data/china/geometryCouties/4105.json';
+import c4106 from '../data/china/geometryCouties/4106.json';
+import c4107 from '../data/china/geometryCouties/4107.json';
+import c4108 from '../data/china/geometryCouties/4108.json';
+import c4109 from '../data/china/geometryCouties/4109.json';
+import c4110 from '../data/china/geometryCouties/4110.json';
+import c4111 from '../data/china/geometryCouties/4111.json';
+import c4112 from '../data/china/geometryCouties/4112.json';
+import c4113 from '../data/china/geometryCouties/4113.json';
+import c4114 from '../data/china/geometryCouties/4114.json';
+import c4115 from '../data/china/geometryCouties/4115.json';
+import c4116 from '../data/china/geometryCouties/4116.json';
+import c4117 from '../data/china/geometryCouties/4117.json';
+import c4201 from '../data/china/geometryCouties/4201.json';
+import c4202 from '../data/china/geometryCouties/4202.json';
+import c4203 from '../data/china/geometryCouties/4203.json';
+import c4205 from '../data/china/geometryCouties/4205.json';
+import c4206 from '../data/china/geometryCouties/4206.json';
+import c4207 from '../data/china/geometryCouties/4207.json';
+import c4208 from '../data/china/geometryCouties/4208.json';
+import c4209 from '../data/china/geometryCouties/4209.json';
+import c4210 from '../data/china/geometryCouties/4210.json';
+import c4211 from '../data/china/geometryCouties/4211.json';
+import c4212 from '../data/china/geometryCouties/4212.json';
+import c4213 from '../data/china/geometryCouties/4213.json';
+import c4228 from '../data/china/geometryCouties/4228.json';
+import c4290 from '../data/china/geometryCouties/4290.json';
+import c4301 from '../data/china/geometryCouties/4301.json';
+import c4302 from '../data/china/geometryCouties/4302.json';
+import c4303 from '../data/china/geometryCouties/4303.json';
+import c4304 from '../data/china/geometryCouties/4304.json';
+import c4305 from '../data/china/geometryCouties/4305.json';
+import c4306 from '../data/china/geometryCouties/4306.json';
+import c4307 from '../data/china/geometryCouties/4307.json';
+import c4308 from '../data/china/geometryCouties/4308.json';
+import c4309 from '../data/china/geometryCouties/4309.json';
+import c4310 from '../data/china/geometryCouties/4310.json';
+import c4311 from '../data/china/geometryCouties/4311.json';
+import c4312 from '../data/china/geometryCouties/4312.json';
+import c4313 from '../data/china/geometryCouties/4313.json';
+import c4331 from '../data/china/geometryCouties/4331.json';
+import c4401 from '../data/china/geometryCouties/4401.json';
+import c4402 from '../data/china/geometryCouties/4402.json';
+import c4403 from '../data/china/geometryCouties/4403.json';
+import c4404 from '../data/china/geometryCouties/4404.json';
+import c4405 from '../data/china/geometryCouties/4405.json';
+import c4406 from '../data/china/geometryCouties/4406.json';
+import c4407 from '../data/china/geometryCouties/4407.json';
+import c4408 from '../data/china/geometryCouties/4408.json';
+import c4409 from '../data/china/geometryCouties/4409.json';
+import c4412 from '../data/china/geometryCouties/4412.json';
+import c4413 from '../data/china/geometryCouties/4413.json';
+import c4414 from '../data/china/geometryCouties/4414.json';
+import c4415 from '../data/china/geometryCouties/4415.json';
+import c4416 from '../data/china/geometryCouties/4416.json';
+import c4417 from '../data/china/geometryCouties/4417.json';
+import c4418 from '../data/china/geometryCouties/4418.json';
+import c4419 from '../data/china/geometryCouties/4419.json';
+import c4420 from '../data/china/geometryCouties/4420.json';
+import c4451 from '../data/china/geometryCouties/4451.json';
+import c4452 from '../data/china/geometryCouties/4452.json';
+import c4453 from '../data/china/geometryCouties/4453.json';
+import c4501 from '../data/china/geometryCouties/4501.json';
+import c4502 from '../data/china/geometryCouties/4502.json';
+import c4503 from '../data/china/geometryCouties/4503.json';
+import c4504 from '../data/china/geometryCouties/4504.json';
+import c4505 from '../data/china/geometryCouties/4505.json';
+import c4506 from '../data/china/geometryCouties/4506.json';
+import c4507 from '../data/china/geometryCouties/4507.json';
+import c4508 from '../data/china/geometryCouties/4508.json';
+import c4509 from '../data/china/geometryCouties/4509.json';
+import c4510 from '../data/china/geometryCouties/4510.json';
+import c4511 from '../data/china/geometryCouties/4511.json';
+import c4512 from '../data/china/geometryCouties/4512.json';
+import c4513 from '../data/china/geometryCouties/4513.json';
+import c4514 from '../data/china/geometryCouties/4514.json';
+import c4601 from '../data/china/geometryCouties/4601.json';
+import c4602 from '../data/china/geometryCouties/4602.json';
+import c4603 from '../data/china/geometryCouties/4603.json';
+import c4690 from '../data/china/geometryCouties/4690.json';
+import c5001 from '../data/china/geometryCouties/5001.json';
+import c5101 from '../data/china/geometryCouties/5101.json';
+import c5103 from '../data/china/geometryCouties/5103.json';
+import c5104 from '../data/china/geometryCouties/5104.json';
+import c5105 from '../data/china/geometryCouties/5105.json';
+import c5106 from '../data/china/geometryCouties/5106.json';
+import c5107 from '../data/china/geometryCouties/5107.json';
+import c5108 from '../data/china/geometryCouties/5108.json';
+import c5109 from '../data/china/geometryCouties/5109.json';
+import c5110 from '../data/china/geometryCouties/5110.json';
+import c5111 from '../data/china/geometryCouties/5111.json';
+import c5113 from '../data/china/geometryCouties/5113.json';
+import c5114 from '../data/china/geometryCouties/5114.json';
+import c5115 from '../data/china/geometryCouties/5115.json';
+import c5116 from '../data/china/geometryCouties/5116.json';
+import c5117 from '../data/china/geometryCouties/5117.json';
+import c5118 from '../data/china/geometryCouties/5118.json';
+import c5119 from '../data/china/geometryCouties/5119.json';
+import c5120 from '../data/china/geometryCouties/5120.json';
+import c5132 from '../data/china/geometryCouties/5132.json';
+import c5133 from '../data/china/geometryCouties/5133.json';
+import c5134 from '../data/china/geometryCouties/5134.json';
+import c5201 from '../data/china/geometryCouties/5201.json';
+import c5202 from '../data/china/geometryCouties/5202.json';
+import c5203 from '../data/china/geometryCouties/5203.json';
+import c5204 from '../data/china/geometryCouties/5204.json';
+import c5222 from '../data/china/geometryCouties/5222.json';
+import c5223 from '../data/china/geometryCouties/5223.json';
+import c5224 from '../data/china/geometryCouties/5224.json';
+import c5226 from '../data/china/geometryCouties/5226.json';
+import c5227 from '../data/china/geometryCouties/5227.json';
+import c5301 from '../data/china/geometryCouties/5301.json';
+import c5303 from '../data/china/geometryCouties/5303.json';
+import c5304 from '../data/china/geometryCouties/5304.json';
+import c5305 from '../data/china/geometryCouties/5305.json';
+import c5306 from '../data/china/geometryCouties/5306.json';
+import c5307 from '../data/china/geometryCouties/5307.json';
+import c5308 from '../data/china/geometryCouties/5308.json';
+import c5309 from '../data/china/geometryCouties/5309.json';
+import c5323 from '../data/china/geometryCouties/5323.json';
+import c5325 from '../data/china/geometryCouties/5325.json';
+import c5326 from '../data/china/geometryCouties/5326.json';
+import c5328 from '../data/china/geometryCouties/5328.json';
+import c5329 from '../data/china/geometryCouties/5329.json';
+import c5331 from '../data/china/geometryCouties/5331.json';
+import c5333 from '../data/china/geometryCouties/5333.json';
+import c5334 from '../data/china/geometryCouties/5334.json';
+import c5401 from '../data/china/geometryCouties/5401.json';
+import c5421 from '../data/china/geometryCouties/5421.json';
+import c5422 from '../data/china/geometryCouties/5422.json';
+import c5423 from '../data/china/geometryCouties/5423.json';
+import c5424 from '../data/china/geometryCouties/5424.json';
+import c5425 from '../data/china/geometryCouties/5425.json';
+import c5426 from '../data/china/geometryCouties/5426.json';
+import c6101 from '../data/china/geometryCouties/6101.json';
+import c6102 from '../data/china/geometryCouties/6102.json';
+import c6103 from '../data/china/geometryCouties/6103.json';
+import c6104 from '../data/china/geometryCouties/6104.json';
+import c6105 from '../data/china/geometryCouties/6105.json';
+import c6106 from '../data/china/geometryCouties/6106.json';
+import c6107 from '../data/china/geometryCouties/6107.json';
+import c6108 from '../data/china/geometryCouties/6108.json';
+import c6109 from '../data/china/geometryCouties/6109.json';
+import c6110 from '../data/china/geometryCouties/6110.json';
+import c6201 from '../data/china/geometryCouties/6201.json';
+import c6202 from '../data/china/geometryCouties/6202.json';
+import c6203 from '../data/china/geometryCouties/6203.json';
+import c6204 from '../data/china/geometryCouties/6204.json';
+import c6205 from '../data/china/geometryCouties/6205.json';
+import c6206 from '../data/china/geometryCouties/6206.json';
+import c6207 from '../data/china/geometryCouties/6207.json';
+import c6208 from '../data/china/geometryCouties/6208.json';
+import c6209 from '../data/china/geometryCouties/6209.json';
+import c6210 from '../data/china/geometryCouties/6210.json';
+import c6211 from '../data/china/geometryCouties/6211.json';
+import c6212 from '../data/china/geometryCouties/6212.json';
+import c6229 from '../data/china/geometryCouties/6229.json';
+import c6230 from '../data/china/geometryCouties/6230.json';
+import c6301 from '../data/china/geometryCouties/6301.json';
+import c6321 from '../data/china/geometryCouties/6321.json';
+import c6322 from '../data/china/geometryCouties/6322.json';
+import c6323 from '../data/china/geometryCouties/6323.json';
+import c6325 from '../data/china/geometryCouties/6325.json';
+import c6326 from '../data/china/geometryCouties/6326.json';
+import c6327 from '../data/china/geometryCouties/6327.json';
+import c6328 from '../data/china/geometryCouties/6328.json';
+import c6401 from '../data/china/geometryCouties/6401.json';
+import c6402 from '../data/china/geometryCouties/6402.json';
+import c6403 from '../data/china/geometryCouties/6403.json';
+import c6404 from '../data/china/geometryCouties/6404.json';
+import c6405 from '../data/china/geometryCouties/6405.json';
+import c6501 from '../data/china/geometryCouties/6501.json';
+import c6502 from '../data/china/geometryCouties/6502.json';
+import c6521 from '../data/china/geometryCouties/6521.json';
+import c6522 from '../data/china/geometryCouties/6522.json';
+import c6523 from '../data/china/geometryCouties/6523.json';
+import c6527 from '../data/china/geometryCouties/6527.json';
+import c6528 from '../data/china/geometryCouties/6528.json';
+import c6529 from '../data/china/geometryCouties/6529.json';
+import c6530 from '../data/china/geometryCouties/6530.json';
+import c6531 from '../data/china/geometryCouties/6531.json';
+import c6532 from '../data/china/geometryCouties/6532.json';
+import c6540 from '../data/china/geometryCouties/6540.json';
+import c6542 from '../data/china/geometryCouties/6542.json';
+import c6543 from '../data/china/geometryCouties/6543.json';
+import c6590 from '../data/china/geometryCouties/6590.json';
+import c7100 from '../data/china/geometryCouties/7100.json';
+import c8101 from '../data/china/geometryCouties/8101.json';
+import c8200 from '../data/china/geometryCouties/8200.json';
 import p11 from '../data/china/geometryProvince/11.json';
 import p12 from '../data/china/geometryProvince/12.json';
 import p13 from '../data/china/geometryProvince/13.json';
@@ -388,350 +388,350 @@ export const GEO_DATA_MAP: Record<string, any> = {
   '/data/world/japan.json': worldJapan,
   '/data/world/usa.json': worldUsa,
   '/data/china/china.json': china,
-  '/data/china/geometryCouties/110100.json': c110100,
-  '/data/china/geometryCouties/120100.json': c120100,
-  '/data/china/geometryCouties/130100.json': c130100,
-  '/data/china/geometryCouties/130200.json': c130200,
-  '/data/china/geometryCouties/130300.json': c130300,
-  '/data/china/geometryCouties/130400.json': c130400,
-  '/data/china/geometryCouties/130500.json': c130500,
-  '/data/china/geometryCouties/130600.json': c130600,
-  '/data/china/geometryCouties/130700.json': c130700,
-  '/data/china/geometryCouties/130800.json': c130800,
-  '/data/china/geometryCouties/130900.json': c130900,
-  '/data/china/geometryCouties/131000.json': c131000,
-  '/data/china/geometryCouties/131100.json': c131100,
-  '/data/china/geometryCouties/140100.json': c140100,
-  '/data/china/geometryCouties/140200.json': c140200,
-  '/data/china/geometryCouties/140300.json': c140300,
-  '/data/china/geometryCouties/140400.json': c140400,
-  '/data/china/geometryCouties/140500.json': c140500,
-  '/data/china/geometryCouties/140600.json': c140600,
-  '/data/china/geometryCouties/140700.json': c140700,
-  '/data/china/geometryCouties/140800.json': c140800,
-  '/data/china/geometryCouties/140900.json': c140900,
-  '/data/china/geometryCouties/141000.json': c141000,
-  '/data/china/geometryCouties/141100.json': c141100,
-  '/data/china/geometryCouties/150100.json': c150100,
-  '/data/china/geometryCouties/150200.json': c150200,
-  '/data/china/geometryCouties/150300.json': c150300,
-  '/data/china/geometryCouties/150400.json': c150400,
-  '/data/china/geometryCouties/150500.json': c150500,
-  '/data/china/geometryCouties/150600.json': c150600,
-  '/data/china/geometryCouties/150700.json': c150700,
-  '/data/china/geometryCouties/150800.json': c150800,
-  '/data/china/geometryCouties/150900.json': c150900,
-  '/data/china/geometryCouties/152200.json': c152200,
-  '/data/china/geometryCouties/152500.json': c152500,
-  '/data/china/geometryCouties/152900.json': c152900,
-  '/data/china/geometryCouties/210100.json': c210100,
-  '/data/china/geometryCouties/210200.json': c210200,
-  '/data/china/geometryCouties/210300.json': c210300,
-  '/data/china/geometryCouties/210400.json': c210400,
-  '/data/china/geometryCouties/210500.json': c210500,
-  '/data/china/geometryCouties/210600.json': c210600,
-  '/data/china/geometryCouties/210700.json': c210700,
-  '/data/china/geometryCouties/210800.json': c210800,
-  '/data/china/geometryCouties/210900.json': c210900,
-  '/data/china/geometryCouties/211000.json': c211000,
-  '/data/china/geometryCouties/211100.json': c211100,
-  '/data/china/geometryCouties/211200.json': c211200,
-  '/data/china/geometryCouties/211300.json': c211300,
-  '/data/china/geometryCouties/211400.json': c211400,
-  '/data/china/geometryCouties/220100.json': c220100,
-  '/data/china/geometryCouties/220200.json': c220200,
-  '/data/china/geometryCouties/220300.json': c220300,
-  '/data/china/geometryCouties/220400.json': c220400,
-  '/data/china/geometryCouties/220500.json': c220500,
-  '/data/china/geometryCouties/220600.json': c220600,
-  '/data/china/geometryCouties/220700.json': c220700,
-  '/data/china/geometryCouties/220800.json': c220800,
-  '/data/china/geometryCouties/222400.json': c222400,
-  '/data/china/geometryCouties/230100.json': c230100,
-  '/data/china/geometryCouties/230200.json': c230200,
-  '/data/china/geometryCouties/230300.json': c230300,
-  '/data/china/geometryCouties/230400.json': c230400,
-  '/data/china/geometryCouties/230500.json': c230500,
-  '/data/china/geometryCouties/230600.json': c230600,
-  '/data/china/geometryCouties/230700.json': c230700,
-  '/data/china/geometryCouties/230800.json': c230800,
-  '/data/china/geometryCouties/230900.json': c230900,
-  '/data/china/geometryCouties/231000.json': c231000,
-  '/data/china/geometryCouties/231100.json': c231100,
-  '/data/china/geometryCouties/231200.json': c231200,
-  '/data/china/geometryCouties/232700.json': c232700,
-  '/data/china/geometryCouties/310100.json': c310100,
-  '/data/china/geometryCouties/310200.json': c310200,
-  '/data/china/geometryCouties/320100.json': c320100,
-  '/data/china/geometryCouties/320200.json': c320200,
-  '/data/china/geometryCouties/320300.json': c320300,
-  '/data/china/geometryCouties/320400.json': c320400,
-  '/data/china/geometryCouties/320500.json': c320500,
-  '/data/china/geometryCouties/320600.json': c320600,
-  '/data/china/geometryCouties/320700.json': c320700,
-  '/data/china/geometryCouties/320800.json': c320800,
-  '/data/china/geometryCouties/320900.json': c320900,
-  '/data/china/geometryCouties/321000.json': c321000,
-  '/data/china/geometryCouties/321100.json': c321100,
-  '/data/china/geometryCouties/321200.json': c321200,
-  '/data/china/geometryCouties/321300.json': c321300,
-  '/data/china/geometryCouties/330100.json': c330100,
-  '/data/china/geometryCouties/330200.json': c330200,
-  '/data/china/geometryCouties/330300.json': c330300,
-  '/data/china/geometryCouties/330400.json': c330400,
-  '/data/china/geometryCouties/330500.json': c330500,
-  '/data/china/geometryCouties/330600.json': c330600,
-  '/data/china/geometryCouties/330700.json': c330700,
-  '/data/china/geometryCouties/330800.json': c330800,
-  '/data/china/geometryCouties/330900.json': c330900,
-  '/data/china/geometryCouties/331000.json': c331000,
-  '/data/china/geometryCouties/331100.json': c331100,
-  '/data/china/geometryCouties/340100.json': c340100,
-  '/data/china/geometryCouties/340200.json': c340200,
-  '/data/china/geometryCouties/340300.json': c340300,
-  '/data/china/geometryCouties/340400.json': c340400,
-  '/data/china/geometryCouties/340500.json': c340500,
-  '/data/china/geometryCouties/340600.json': c340600,
-  '/data/china/geometryCouties/340700.json': c340700,
-  '/data/china/geometryCouties/340800.json': c340800,
-  '/data/china/geometryCouties/341000.json': c341000,
-  '/data/china/geometryCouties/341100.json': c341100,
-  '/data/china/geometryCouties/341200.json': c341200,
-  '/data/china/geometryCouties/341300.json': c341300,
-  '/data/china/geometryCouties/341500.json': c341500,
-  '/data/china/geometryCouties/341600.json': c341600,
-  '/data/china/geometryCouties/341700.json': c341700,
-  '/data/china/geometryCouties/341800.json': c341800,
-  '/data/china/geometryCouties/350100.json': c350100,
-  '/data/china/geometryCouties/350200.json': c350200,
-  '/data/china/geometryCouties/350300.json': c350300,
-  '/data/china/geometryCouties/350400.json': c350400,
-  '/data/china/geometryCouties/350500.json': c350500,
-  '/data/china/geometryCouties/350600.json': c350600,
-  '/data/china/geometryCouties/350700.json': c350700,
-  '/data/china/geometryCouties/350800.json': c350800,
-  '/data/china/geometryCouties/350900.json': c350900,
-  '/data/china/geometryCouties/360100.json': c360100,
-  '/data/china/geometryCouties/360200.json': c360200,
-  '/data/china/geometryCouties/360300.json': c360300,
-  '/data/china/geometryCouties/360400.json': c360400,
-  '/data/china/geometryCouties/360500.json': c360500,
-  '/data/china/geometryCouties/360600.json': c360600,
-  '/data/china/geometryCouties/360700.json': c360700,
-  '/data/china/geometryCouties/360800.json': c360800,
-  '/data/china/geometryCouties/360900.json': c360900,
-  '/data/china/geometryCouties/361000.json': c361000,
-  '/data/china/geometryCouties/361100.json': c361100,
-  '/data/china/geometryCouties/370100.json': c370100,
-  '/data/china/geometryCouties/370200.json': c370200,
-  '/data/china/geometryCouties/370300.json': c370300,
-  '/data/china/geometryCouties/370400.json': c370400,
-  '/data/china/geometryCouties/370500.json': c370500,
-  '/data/china/geometryCouties/370600.json': c370600,
-  '/data/china/geometryCouties/370700.json': c370700,
-  '/data/china/geometryCouties/370800.json': c370800,
-  '/data/china/geometryCouties/370900.json': c370900,
-  '/data/china/geometryCouties/371000.json': c371000,
-  '/data/china/geometryCouties/371100.json': c371100,
-  '/data/china/geometryCouties/371200.json': c371200,
-  '/data/china/geometryCouties/371300.json': c371300,
-  '/data/china/geometryCouties/371400.json': c371400,
-  '/data/china/geometryCouties/371500.json': c371500,
-  '/data/china/geometryCouties/371600.json': c371600,
-  '/data/china/geometryCouties/371700.json': c371700,
-  '/data/china/geometryCouties/410100.json': c410100,
-  '/data/china/geometryCouties/410200.json': c410200,
-  '/data/china/geometryCouties/410300.json': c410300,
-  '/data/china/geometryCouties/410400.json': c410400,
-  '/data/china/geometryCouties/410500.json': c410500,
-  '/data/china/geometryCouties/410600.json': c410600,
-  '/data/china/geometryCouties/410700.json': c410700,
-  '/data/china/geometryCouties/410800.json': c410800,
-  '/data/china/geometryCouties/410900.json': c410900,
-  '/data/china/geometryCouties/411000.json': c411000,
-  '/data/china/geometryCouties/411100.json': c411100,
-  '/data/china/geometryCouties/411200.json': c411200,
-  '/data/china/geometryCouties/411300.json': c411300,
-  '/data/china/geometryCouties/411400.json': c411400,
-  '/data/china/geometryCouties/411500.json': c411500,
-  '/data/china/geometryCouties/411600.json': c411600,
-  '/data/china/geometryCouties/411700.json': c411700,
-  '/data/china/geometryCouties/420100.json': c420100,
-  '/data/china/geometryCouties/420200.json': c420200,
-  '/data/china/geometryCouties/420300.json': c420300,
-  '/data/china/geometryCouties/420500.json': c420500,
-  '/data/china/geometryCouties/420600.json': c420600,
-  '/data/china/geometryCouties/420700.json': c420700,
-  '/data/china/geometryCouties/420800.json': c420800,
-  '/data/china/geometryCouties/420900.json': c420900,
-  '/data/china/geometryCouties/421000.json': c421000,
-  '/data/china/geometryCouties/421100.json': c421100,
-  '/data/china/geometryCouties/421200.json': c421200,
-  '/data/china/geometryCouties/421300.json': c421300,
-  '/data/china/geometryCouties/422800.json': c422800,
-  '/data/china/geometryCouties/429000.json': c429000,
-  '/data/china/geometryCouties/430100.json': c430100,
-  '/data/china/geometryCouties/430200.json': c430200,
-  '/data/china/geometryCouties/430300.json': c430300,
-  '/data/china/geometryCouties/430400.json': c430400,
-  '/data/china/geometryCouties/430500.json': c430500,
-  '/data/china/geometryCouties/430600.json': c430600,
-  '/data/china/geometryCouties/430700.json': c430700,
-  '/data/china/geometryCouties/430800.json': c430800,
-  '/data/china/geometryCouties/430900.json': c430900,
-  '/data/china/geometryCouties/431000.json': c431000,
-  '/data/china/geometryCouties/431100.json': c431100,
-  '/data/china/geometryCouties/431200.json': c431200,
-  '/data/china/geometryCouties/431300.json': c431300,
-  '/data/china/geometryCouties/433100.json': c433100,
-  '/data/china/geometryCouties/440100.json': c440100,
-  '/data/china/geometryCouties/440200.json': c440200,
-  '/data/china/geometryCouties/440300.json': c440300,
-  '/data/china/geometryCouties/440400.json': c440400,
-  '/data/china/geometryCouties/440500.json': c440500,
-  '/data/china/geometryCouties/440600.json': c440600,
-  '/data/china/geometryCouties/440700.json': c440700,
-  '/data/china/geometryCouties/440800.json': c440800,
-  '/data/china/geometryCouties/440900.json': c440900,
-  '/data/china/geometryCouties/441200.json': c441200,
-  '/data/china/geometryCouties/441300.json': c441300,
-  '/data/china/geometryCouties/441400.json': c441400,
-  '/data/china/geometryCouties/441500.json': c441500,
-  '/data/china/geometryCouties/441600.json': c441600,
-  '/data/china/geometryCouties/441700.json': c441700,
-  '/data/china/geometryCouties/441800.json': c441800,
-  '/data/china/geometryCouties/441900.json': c441900,
-  '/data/china/geometryCouties/442000.json': c442000,
-  '/data/china/geometryCouties/445100.json': c445100,
-  '/data/china/geometryCouties/445200.json': c445200,
-  '/data/china/geometryCouties/445300.json': c445300,
-  '/data/china/geometryCouties/450100.json': c450100,
-  '/data/china/geometryCouties/450200.json': c450200,
-  '/data/china/geometryCouties/450300.json': c450300,
-  '/data/china/geometryCouties/450400.json': c450400,
-  '/data/china/geometryCouties/450500.json': c450500,
-  '/data/china/geometryCouties/450600.json': c450600,
-  '/data/china/geometryCouties/450700.json': c450700,
-  '/data/china/geometryCouties/450800.json': c450800,
-  '/data/china/geometryCouties/450900.json': c450900,
-  '/data/china/geometryCouties/451000.json': c451000,
-  '/data/china/geometryCouties/451100.json': c451100,
-  '/data/china/geometryCouties/451200.json': c451200,
-  '/data/china/geometryCouties/451300.json': c451300,
-  '/data/china/geometryCouties/451400.json': c451400,
-  '/data/china/geometryCouties/460100.json': c460100,
-  '/data/china/geometryCouties/460200.json': c460200,
-  '/data/china/geometryCouties/460300.json': c460300,
-  '/data/china/geometryCouties/469000.json': c469000,
-  '/data/china/geometryCouties/500100.json': c500100,
-  '/data/china/geometryCouties/510100.json': c510100,
-  '/data/china/geometryCouties/510300.json': c510300,
-  '/data/china/geometryCouties/510400.json': c510400,
-  '/data/china/geometryCouties/510500.json': c510500,
-  '/data/china/geometryCouties/510600.json': c510600,
-  '/data/china/geometryCouties/510700.json': c510700,
-  '/data/china/geometryCouties/510800.json': c510800,
-  '/data/china/geometryCouties/510900.json': c510900,
-  '/data/china/geometryCouties/511000.json': c511000,
-  '/data/china/geometryCouties/511100.json': c511100,
-  '/data/china/geometryCouties/511300.json': c511300,
-  '/data/china/geometryCouties/511400.json': c511400,
-  '/data/china/geometryCouties/511500.json': c511500,
-  '/data/china/geometryCouties/511600.json': c511600,
-  '/data/china/geometryCouties/511700.json': c511700,
-  '/data/china/geometryCouties/511800.json': c511800,
-  '/data/china/geometryCouties/511900.json': c511900,
-  '/data/china/geometryCouties/512000.json': c512000,
-  '/data/china/geometryCouties/513200.json': c513200,
-  '/data/china/geometryCouties/513300.json': c513300,
-  '/data/china/geometryCouties/513400.json': c513400,
-  '/data/china/geometryCouties/520100.json': c520100,
-  '/data/china/geometryCouties/520200.json': c520200,
-  '/data/china/geometryCouties/520300.json': c520300,
-  '/data/china/geometryCouties/520400.json': c520400,
-  '/data/china/geometryCouties/522200.json': c522200,
-  '/data/china/geometryCouties/522300.json': c522300,
-  '/data/china/geometryCouties/522400.json': c522400,
-  '/data/china/geometryCouties/522600.json': c522600,
-  '/data/china/geometryCouties/522700.json': c522700,
-  '/data/china/geometryCouties/530100.json': c530100,
-  '/data/china/geometryCouties/530300.json': c530300,
-  '/data/china/geometryCouties/530400.json': c530400,
-  '/data/china/geometryCouties/530500.json': c530500,
-  '/data/china/geometryCouties/530600.json': c530600,
-  '/data/china/geometryCouties/530700.json': c530700,
-  '/data/china/geometryCouties/530800.json': c530800,
-  '/data/china/geometryCouties/530900.json': c530900,
-  '/data/china/geometryCouties/532300.json': c532300,
-  '/data/china/geometryCouties/532500.json': c532500,
-  '/data/china/geometryCouties/532600.json': c532600,
-  '/data/china/geometryCouties/532800.json': c532800,
-  '/data/china/geometryCouties/532900.json': c532900,
-  '/data/china/geometryCouties/533100.json': c533100,
-  '/data/china/geometryCouties/533300.json': c533300,
-  '/data/china/geometryCouties/533400.json': c533400,
-  '/data/china/geometryCouties/540100.json': c540100,
-  '/data/china/geometryCouties/542100.json': c542100,
-  '/data/china/geometryCouties/542200.json': c542200,
-  '/data/china/geometryCouties/542300.json': c542300,
-  '/data/china/geometryCouties/542400.json': c542400,
-  '/data/china/geometryCouties/542500.json': c542500,
-  '/data/china/geometryCouties/542600.json': c542600,
-  '/data/china/geometryCouties/610100.json': c610100,
-  '/data/china/geometryCouties/610200.json': c610200,
-  '/data/china/geometryCouties/610300.json': c610300,
-  '/data/china/geometryCouties/610400.json': c610400,
-  '/data/china/geometryCouties/610500.json': c610500,
-  '/data/china/geometryCouties/610600.json': c610600,
-  '/data/china/geometryCouties/610700.json': c610700,
-  '/data/china/geometryCouties/610800.json': c610800,
-  '/data/china/geometryCouties/610900.json': c610900,
-  '/data/china/geometryCouties/611000.json': c611000,
-  '/data/china/geometryCouties/620100.json': c620100,
-  '/data/china/geometryCouties/620200.json': c620200,
-  '/data/china/geometryCouties/620300.json': c620300,
-  '/data/china/geometryCouties/620400.json': c620400,
-  '/data/china/geometryCouties/620500.json': c620500,
-  '/data/china/geometryCouties/620600.json': c620600,
-  '/data/china/geometryCouties/620700.json': c620700,
-  '/data/china/geometryCouties/620800.json': c620800,
-  '/data/china/geometryCouties/620900.json': c620900,
-  '/data/china/geometryCouties/621000.json': c621000,
-  '/data/china/geometryCouties/621100.json': c621100,
-  '/data/china/geometryCouties/621200.json': c621200,
-  '/data/china/geometryCouties/622900.json': c622900,
-  '/data/china/geometryCouties/623000.json': c623000,
-  '/data/china/geometryCouties/630100.json': c630100,
-  '/data/china/geometryCouties/632100.json': c632100,
-  '/data/china/geometryCouties/632200.json': c632200,
-  '/data/china/geometryCouties/632300.json': c632300,
-  '/data/china/geometryCouties/632500.json': c632500,
-  '/data/china/geometryCouties/632600.json': c632600,
-  '/data/china/geometryCouties/632700.json': c632700,
-  '/data/china/geometryCouties/632800.json': c632800,
-  '/data/china/geometryCouties/640100.json': c640100,
-  '/data/china/geometryCouties/640200.json': c640200,
-  '/data/china/geometryCouties/640300.json': c640300,
-  '/data/china/geometryCouties/640400.json': c640400,
-  '/data/china/geometryCouties/640500.json': c640500,
-  '/data/china/geometryCouties/650100.json': c650100,
-  '/data/china/geometryCouties/650200.json': c650200,
-  '/data/china/geometryCouties/652100.json': c652100,
-  '/data/china/geometryCouties/652200.json': c652200,
-  '/data/china/geometryCouties/652300.json': c652300,
-  '/data/china/geometryCouties/652700.json': c652700,
-  '/data/china/geometryCouties/652800.json': c652800,
-  '/data/china/geometryCouties/652900.json': c652900,
-  '/data/china/geometryCouties/653000.json': c653000,
-  '/data/china/geometryCouties/653100.json': c653100,
-  '/data/china/geometryCouties/653200.json': c653200,
-  '/data/china/geometryCouties/654000.json': c654000,
-  '/data/china/geometryCouties/654200.json': c654200,
-  '/data/china/geometryCouties/654300.json': c654300,
-  '/data/china/geometryCouties/659000.json': c659000,
-  '/data/china/geometryCouties/710000.json': c710000,
-  '/data/china/geometryCouties/810100.json': c810100,
-  '/data/china/geometryCouties/820000.json': c820000,
+  '/data/china/geometryCouties/1101.json': c1101,
+  '/data/china/geometryCouties/1201.json': c1201,
+  '/data/china/geometryCouties/1301.json': c1301,
+  '/data/china/geometryCouties/1302.json': c1302,
+  '/data/china/geometryCouties/1303.json': c1303,
+  '/data/china/geometryCouties/1304.json': c1304,
+  '/data/china/geometryCouties/1305.json': c1305,
+  '/data/china/geometryCouties/1306.json': c1306,
+  '/data/china/geometryCouties/1307.json': c1307,
+  '/data/china/geometryCouties/1308.json': c1308,
+  '/data/china/geometryCouties/1309.json': c1309,
+  '/data/china/geometryCouties/1310.json': c1310,
+  '/data/china/geometryCouties/1311.json': c1311,
+  '/data/china/geometryCouties/1401.json': c1401,
+  '/data/china/geometryCouties/1402.json': c1402,
+  '/data/china/geometryCouties/1403.json': c1403,
+  '/data/china/geometryCouties/1404.json': c1404,
+  '/data/china/geometryCouties/1405.json': c1405,
+  '/data/china/geometryCouties/1406.json': c1406,
+  '/data/china/geometryCouties/1407.json': c1407,
+  '/data/china/geometryCouties/1408.json': c1408,
+  '/data/china/geometryCouties/1409.json': c1409,
+  '/data/china/geometryCouties/1410.json': c1410,
+  '/data/china/geometryCouties/1411.json': c1411,
+  '/data/china/geometryCouties/1501.json': c1501,
+  '/data/china/geometryCouties/1502.json': c1502,
+  '/data/china/geometryCouties/1503.json': c1503,
+  '/data/china/geometryCouties/1504.json': c1504,
+  '/data/china/geometryCouties/1505.json': c1505,
+  '/data/china/geometryCouties/1506.json': c1506,
+  '/data/china/geometryCouties/1507.json': c1507,
+  '/data/china/geometryCouties/1508.json': c1508,
+  '/data/china/geometryCouties/1509.json': c1509,
+  '/data/china/geometryCouties/1522.json': c1522,
+  '/data/china/geometryCouties/1525.json': c1525,
+  '/data/china/geometryCouties/1529.json': c1529,
+  '/data/china/geometryCouties/2101.json': c2101,
+  '/data/china/geometryCouties/2102.json': c2102,
+  '/data/china/geometryCouties/2103.json': c2103,
+  '/data/china/geometryCouties/2104.json': c2104,
+  '/data/china/geometryCouties/2105.json': c2105,
+  '/data/china/geometryCouties/2106.json': c2106,
+  '/data/china/geometryCouties/2107.json': c2107,
+  '/data/china/geometryCouties/2108.json': c2108,
+  '/data/china/geometryCouties/2109.json': c2109,
+  '/data/china/geometryCouties/2110.json': c2110,
+  '/data/china/geometryCouties/2111.json': c2111,
+  '/data/china/geometryCouties/2112.json': c2112,
+  '/data/china/geometryCouties/2113.json': c2113,
+  '/data/china/geometryCouties/2114.json': c2114,
+  '/data/china/geometryCouties/2201.json': c2201,
+  '/data/china/geometryCouties/2202.json': c2202,
+  '/data/china/geometryCouties/2203.json': c2203,
+  '/data/china/geometryCouties/2204.json': c2204,
+  '/data/china/geometryCouties/2205.json': c2205,
+  '/data/china/geometryCouties/2206.json': c2206,
+  '/data/china/geometryCouties/2207.json': c2207,
+  '/data/china/geometryCouties/2208.json': c2208,
+  '/data/china/geometryCouties/2224.json': c2224,
+  '/data/china/geometryCouties/2301.json': c2301,
+  '/data/china/geometryCouties/2302.json': c2302,
+  '/data/china/geometryCouties/2303.json': c2303,
+  '/data/china/geometryCouties/2304.json': c2304,
+  '/data/china/geometryCouties/2305.json': c2305,
+  '/data/china/geometryCouties/2306.json': c2306,
+  '/data/china/geometryCouties/2307.json': c2307,
+  '/data/china/geometryCouties/2308.json': c2308,
+  '/data/china/geometryCouties/2309.json': c2309,
+  '/data/china/geometryCouties/2310.json': c2310,
+  '/data/china/geometryCouties/2311.json': c2311,
+  '/data/china/geometryCouties/2312.json': c2312,
+  '/data/china/geometryCouties/2327.json': c2327,
+  '/data/china/geometryCouties/3101.json': c3101,
+  '/data/china/geometryCouties/3102.json': c3102,
+  '/data/china/geometryCouties/3201.json': c3201,
+  '/data/china/geometryCouties/3202.json': c3202,
+  '/data/china/geometryCouties/3203.json': c3203,
+  '/data/china/geometryCouties/3204.json': c3204,
+  '/data/china/geometryCouties/3205.json': c3205,
+  '/data/china/geometryCouties/3206.json': c3206,
+  '/data/china/geometryCouties/3207.json': c3207,
+  '/data/china/geometryCouties/3208.json': c3208,
+  '/data/china/geometryCouties/3209.json': c3209,
+  '/data/china/geometryCouties/3210.json': c3210,
+  '/data/china/geometryCouties/3211.json': c3211,
+  '/data/china/geometryCouties/3212.json': c3212,
+  '/data/china/geometryCouties/3213.json': c3213,
+  '/data/china/geometryCouties/3301.json': c3301,
+  '/data/china/geometryCouties/3302.json': c3302,
+  '/data/china/geometryCouties/3303.json': c3303,
+  '/data/china/geometryCouties/3304.json': c3304,
+  '/data/china/geometryCouties/3305.json': c3305,
+  '/data/china/geometryCouties/3306.json': c3306,
+  '/data/china/geometryCouties/3307.json': c3307,
+  '/data/china/geometryCouties/3308.json': c3308,
+  '/data/china/geometryCouties/3309.json': c3309,
+  '/data/china/geometryCouties/3310.json': c3310,
+  '/data/china/geometryCouties/3311.json': c3311,
+  '/data/china/geometryCouties/3401.json': c3401,
+  '/data/china/geometryCouties/3402.json': c3402,
+  '/data/china/geometryCouties/3403.json': c3403,
+  '/data/china/geometryCouties/3404.json': c3404,
+  '/data/china/geometryCouties/3405.json': c3405,
+  '/data/china/geometryCouties/3406.json': c3406,
+  '/data/china/geometryCouties/3407.json': c3407,
+  '/data/china/geometryCouties/3408.json': c3408,
+  '/data/china/geometryCouties/3410.json': c3410,
+  '/data/china/geometryCouties/3411.json': c3411,
+  '/data/china/geometryCouties/3412.json': c3412,
+  '/data/china/geometryCouties/3413.json': c3413,
+  '/data/china/geometryCouties/3415.json': c3415,
+  '/data/china/geometryCouties/3416.json': c3416,
+  '/data/china/geometryCouties/3417.json': c3417,
+  '/data/china/geometryCouties/3418.json': c3418,
+  '/data/china/geometryCouties/3501.json': c3501,
+  '/data/china/geometryCouties/3502.json': c3502,
+  '/data/china/geometryCouties/3503.json': c3503,
+  '/data/china/geometryCouties/3504.json': c3504,
+  '/data/china/geometryCouties/3505.json': c3505,
+  '/data/china/geometryCouties/3506.json': c3506,
+  '/data/china/geometryCouties/3507.json': c3507,
+  '/data/china/geometryCouties/3508.json': c3508,
+  '/data/china/geometryCouties/3509.json': c3509,
+  '/data/china/geometryCouties/3601.json': c3601,
+  '/data/china/geometryCouties/3602.json': c3602,
+  '/data/china/geometryCouties/3603.json': c3603,
+  '/data/china/geometryCouties/3604.json': c3604,
+  '/data/china/geometryCouties/3605.json': c3605,
+  '/data/china/geometryCouties/3606.json': c3606,
+  '/data/china/geometryCouties/3607.json': c3607,
+  '/data/china/geometryCouties/3608.json': c3608,
+  '/data/china/geometryCouties/3609.json': c3609,
+  '/data/china/geometryCouties/3610.json': c3610,
+  '/data/china/geometryCouties/3611.json': c3611,
+  '/data/china/geometryCouties/3701.json': c3701,
+  '/data/china/geometryCouties/3702.json': c3702,
+  '/data/china/geometryCouties/3703.json': c3703,
+  '/data/china/geometryCouties/3704.json': c3704,
+  '/data/china/geometryCouties/3705.json': c3705,
+  '/data/china/geometryCouties/3706.json': c3706,
+  '/data/china/geometryCouties/3707.json': c3707,
+  '/data/china/geometryCouties/3708.json': c3708,
+  '/data/china/geometryCouties/3709.json': c3709,
+  '/data/china/geometryCouties/3710.json': c3710,
+  '/data/china/geometryCouties/3711.json': c3711,
+  '/data/china/geometryCouties/3712.json': c3712,
+  '/data/china/geometryCouties/3713.json': c3713,
+  '/data/china/geometryCouties/3714.json': c3714,
+  '/data/china/geometryCouties/3715.json': c3715,
+  '/data/china/geometryCouties/3716.json': c3716,
+  '/data/china/geometryCouties/3717.json': c3717,
+  '/data/china/geometryCouties/4101.json': c4101,
+  '/data/china/geometryCouties/4102.json': c4102,
+  '/data/china/geometryCouties/4103.json': c4103,
+  '/data/china/geometryCouties/4104.json': c4104,
+  '/data/china/geometryCouties/4105.json': c4105,
+  '/data/china/geometryCouties/4106.json': c4106,
+  '/data/china/geometryCouties/4107.json': c4107,
+  '/data/china/geometryCouties/4108.json': c4108,
+  '/data/china/geometryCouties/4109.json': c4109,
+  '/data/china/geometryCouties/4110.json': c4110,
+  '/data/china/geometryCouties/4111.json': c4111,
+  '/data/china/geometryCouties/4112.json': c4112,
+  '/data/china/geometryCouties/4113.json': c4113,
+  '/data/china/geometryCouties/4114.json': c4114,
+  '/data/china/geometryCouties/4115.json': c4115,
+  '/data/china/geometryCouties/4116.json': c4116,
+  '/data/china/geometryCouties/4117.json': c4117,
+  '/data/china/geometryCouties/4201.json': c4201,
+  '/data/china/geometryCouties/4202.json': c4202,
+  '/data/china/geometryCouties/4203.json': c4203,
+  '/data/china/geometryCouties/4205.json': c4205,
+  '/data/china/geometryCouties/4206.json': c4206,
+  '/data/china/geometryCouties/4207.json': c4207,
+  '/data/china/geometryCouties/4208.json': c4208,
+  '/data/china/geometryCouties/4209.json': c4209,
+  '/data/china/geometryCouties/4210.json': c4210,
+  '/data/china/geometryCouties/4211.json': c4211,
+  '/data/china/geometryCouties/4212.json': c4212,
+  '/data/china/geometryCouties/4213.json': c4213,
+  '/data/china/geometryCouties/4228.json': c4228,
+  '/data/china/geometryCouties/4290.json': c4290,
+  '/data/china/geometryCouties/4301.json': c4301,
+  '/data/china/geometryCouties/4302.json': c4302,
+  '/data/china/geometryCouties/4303.json': c4303,
+  '/data/china/geometryCouties/4304.json': c4304,
+  '/data/china/geometryCouties/4305.json': c4305,
+  '/data/china/geometryCouties/4306.json': c4306,
+  '/data/china/geometryCouties/4307.json': c4307,
+  '/data/china/geometryCouties/4308.json': c4308,
+  '/data/china/geometryCouties/4309.json': c4309,
+  '/data/china/geometryCouties/4310.json': c4310,
+  '/data/china/geometryCouties/4311.json': c4311,
+  '/data/china/geometryCouties/4312.json': c4312,
+  '/data/china/geometryCouties/4313.json': c4313,
+  '/data/china/geometryCouties/4331.json': c4331,
+  '/data/china/geometryCouties/4401.json': c4401,
+  '/data/china/geometryCouties/4402.json': c4402,
+  '/data/china/geometryCouties/4403.json': c4403,
+  '/data/china/geometryCouties/4404.json': c4404,
+  '/data/china/geometryCouties/4405.json': c4405,
+  '/data/china/geometryCouties/4406.json': c4406,
+  '/data/china/geometryCouties/4407.json': c4407,
+  '/data/china/geometryCouties/4408.json': c4408,
+  '/data/china/geometryCouties/4409.json': c4409,
+  '/data/china/geometryCouties/4412.json': c4412,
+  '/data/china/geometryCouties/4413.json': c4413,
+  '/data/china/geometryCouties/4414.json': c4414,
+  '/data/china/geometryCouties/4415.json': c4415,
+  '/data/china/geometryCouties/4416.json': c4416,
+  '/data/china/geometryCouties/4417.json': c4417,
+  '/data/china/geometryCouties/4418.json': c4418,
+  '/data/china/geometryCouties/4419.json': c4419,
+  '/data/china/geometryCouties/4420.json': c4420,
+  '/data/china/geometryCouties/4451.json': c4451,
+  '/data/china/geometryCouties/4452.json': c4452,
+  '/data/china/geometryCouties/4453.json': c4453,
+  '/data/china/geometryCouties/4501.json': c4501,
+  '/data/china/geometryCouties/4502.json': c4502,
+  '/data/china/geometryCouties/4503.json': c4503,
+  '/data/china/geometryCouties/4504.json': c4504,
+  '/data/china/geometryCouties/4505.json': c4505,
+  '/data/china/geometryCouties/4506.json': c4506,
+  '/data/china/geometryCouties/4507.json': c4507,
+  '/data/china/geometryCouties/4508.json': c4508,
+  '/data/china/geometryCouties/4509.json': c4509,
+  '/data/china/geometryCouties/4510.json': c4510,
+  '/data/china/geometryCouties/4511.json': c4511,
+  '/data/china/geometryCouties/4512.json': c4512,
+  '/data/china/geometryCouties/4513.json': c4513,
+  '/data/china/geometryCouties/4514.json': c4514,
+  '/data/china/geometryCouties/4601.json': c4601,
+  '/data/china/geometryCouties/4602.json': c4602,
+  '/data/china/geometryCouties/4603.json': c4603,
+  '/data/china/geometryCouties/4690.json': c4690,
+  '/data/china/geometryCouties/5001.json': c5001,
+  '/data/china/geometryCouties/5101.json': c5101,
+  '/data/china/geometryCouties/5103.json': c5103,
+  '/data/china/geometryCouties/5104.json': c5104,
+  '/data/china/geometryCouties/5105.json': c5105,
+  '/data/china/geometryCouties/5106.json': c5106,
+  '/data/china/geometryCouties/5107.json': c5107,
+  '/data/china/geometryCouties/5108.json': c5108,
+  '/data/china/geometryCouties/5109.json': c5109,
+  '/data/china/geometryCouties/5110.json': c5110,
+  '/data/china/geometryCouties/5111.json': c5111,
+  '/data/china/geometryCouties/5113.json': c5113,
+  '/data/china/geometryCouties/5114.json': c5114,
+  '/data/china/geometryCouties/5115.json': c5115,
+  '/data/china/geometryCouties/5116.json': c5116,
+  '/data/china/geometryCouties/5117.json': c5117,
+  '/data/china/geometryCouties/5118.json': c5118,
+  '/data/china/geometryCouties/5119.json': c5119,
+  '/data/china/geometryCouties/5120.json': c5120,
+  '/data/china/geometryCouties/5132.json': c5132,
+  '/data/china/geometryCouties/5133.json': c5133,
+  '/data/china/geometryCouties/5134.json': c5134,
+  '/data/china/geometryCouties/5201.json': c5201,
+  '/data/china/geometryCouties/5202.json': c5202,
+  '/data/china/geometryCouties/5203.json': c5203,
+  '/data/china/geometryCouties/5204.json': c5204,
+  '/data/china/geometryCouties/5222.json': c5222,
+  '/data/china/geometryCouties/5223.json': c5223,
+  '/data/china/geometryCouties/5224.json': c5224,
+  '/data/china/geometryCouties/5226.json': c5226,
+  '/data/china/geometryCouties/5227.json': c5227,
+  '/data/china/geometryCouties/5301.json': c5301,
+  '/data/china/geometryCouties/5303.json': c5303,
+  '/data/china/geometryCouties/5304.json': c5304,
+  '/data/china/geometryCouties/5305.json': c5305,
+  '/data/china/geometryCouties/5306.json': c5306,
+  '/data/china/geometryCouties/5307.json': c5307,
+  '/data/china/geometryCouties/5308.json': c5308,
+  '/data/china/geometryCouties/5309.json': c5309,
+  '/data/china/geometryCouties/5323.json': c5323,
+  '/data/china/geometryCouties/5325.json': c5325,
+  '/data/china/geometryCouties/5326.json': c5326,
+  '/data/china/geometryCouties/5328.json': c5328,
+  '/data/china/geometryCouties/5329.json': c5329,
+  '/data/china/geometryCouties/5331.json': c5331,
+  '/data/china/geometryCouties/5333.json': c5333,
+  '/data/china/geometryCouties/5334.json': c5334,
+  '/data/china/geometryCouties/5401.json': c5401,
+  '/data/china/geometryCouties/5421.json': c5421,
+  '/data/china/geometryCouties/5422.json': c5422,
+  '/data/china/geometryCouties/5423.json': c5423,
+  '/data/china/geometryCouties/5424.json': c5424,
+  '/data/china/geometryCouties/5425.json': c5425,
+  '/data/china/geometryCouties/5426.json': c5426,
+  '/data/china/geometryCouties/6101.json': c6101,
+  '/data/china/geometryCouties/6102.json': c6102,
+  '/data/china/geometryCouties/6103.json': c6103,
+  '/data/china/geometryCouties/6104.json': c6104,
+  '/data/china/geometryCouties/6105.json': c6105,
+  '/data/china/geometryCouties/6106.json': c6106,
+  '/data/china/geometryCouties/6107.json': c6107,
+  '/data/china/geometryCouties/6108.json': c6108,
+  '/data/china/geometryCouties/6109.json': c6109,
+  '/data/china/geometryCouties/6110.json': c6110,
+  '/data/china/geometryCouties/6201.json': c6201,
+  '/data/china/geometryCouties/6202.json': c6202,
+  '/data/china/geometryCouties/6203.json': c6203,
+  '/data/china/geometryCouties/6204.json': c6204,
+  '/data/china/geometryCouties/6205.json': c6205,
+  '/data/china/geometryCouties/6206.json': c6206,
+  '/data/china/geometryCouties/6207.json': c6207,
+  '/data/china/geometryCouties/6208.json': c6208,
+  '/data/china/geometryCouties/6209.json': c6209,
+  '/data/china/geometryCouties/6210.json': c6210,
+  '/data/china/geometryCouties/6211.json': c6211,
+  '/data/china/geometryCouties/6212.json': c6212,
+  '/data/china/geometryCouties/6229.json': c6229,
+  '/data/china/geometryCouties/6230.json': c6230,
+  '/data/china/geometryCouties/6301.json': c6301,
+  '/data/china/geometryCouties/6321.json': c6321,
+  '/data/china/geometryCouties/6322.json': c6322,
+  '/data/china/geometryCouties/6323.json': c6323,
+  '/data/china/geometryCouties/6325.json': c6325,
+  '/data/china/geometryCouties/6326.json': c6326,
+  '/data/china/geometryCouties/6327.json': c6327,
+  '/data/china/geometryCouties/6328.json': c6328,
+  '/data/china/geometryCouties/6401.json': c6401,
+  '/data/china/geometryCouties/6402.json': c6402,
+  '/data/china/geometryCouties/6403.json': c6403,
+  '/data/china/geometryCouties/6404.json': c6404,
+  '/data/china/geometryCouties/6405.json': c6405,
+  '/data/china/geometryCouties/6501.json': c6501,
+  '/data/china/geometryCouties/6502.json': c6502,
+  '/data/china/geometryCouties/6521.json': c6521,
+  '/data/china/geometryCouties/6522.json': c6522,
+  '/data/china/geometryCouties/6523.json': c6523,
+  '/data/china/geometryCouties/6527.json': c6527,
+  '/data/china/geometryCouties/6528.json': c6528,
+  '/data/china/geometryCouties/6529.json': c6529,
+  '/data/china/geometryCouties/6530.json': c6530,
+  '/data/china/geometryCouties/6531.json': c6531,
+  '/data/china/geometryCouties/6532.json': c6532,
+  '/data/china/geometryCouties/6540.json': c6540,
+  '/data/china/geometryCouties/6542.json': c6542,
+  '/data/china/geometryCouties/6543.json': c6543,
+  '/data/china/geometryCouties/6590.json': c6590,
+  '/data/china/geometryCouties/7100.json': c7100,
+  '/data/china/geometryCouties/8101.json': c8101,
+  '/data/china/geometryCouties/8200.json': c8200,
   '/data/china/geometryProvince/11.json': p11,
   '/data/china/geometryProvince/12.json': p12,
   '/data/china/geometryProvince/13.json': p13,
