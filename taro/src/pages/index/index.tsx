@@ -2,6 +2,7 @@ import { View, Text, Button } from '@tarojs/components';
 import { useMemo, useState } from 'react';
 import { MapCanvas, ViewMode } from '../../components/MapCanvas';
 import { getPOIsByRegion } from '../../data/pois';
+import { getFoodsByProvince, getFoodsByCity } from '../../data/allFoods';
 import { useMapLevel } from '../../hooks/useMapLevel';
 import './index.scss';
 
@@ -53,6 +54,15 @@ export default function Index() {
     return id ? getPOIsByRegion(id) : [];
   }, [selectedRegion]);
 
+  const regionFoods = useMemo(() => {
+    if (!selectedRegion) return [];
+    const provinceFoods = getFoodsByProvince(currentRegionName);
+    if (!provinceFoods) return [];
+    const cityName = selectedRegion.properties?.name || '';
+    const cityFood = getFoodsByCity(provinceFoods, cityName);
+    return cityFood ? cityFood.foods : [];
+  }, [selectedRegion, currentRegionName]);
+
   return (
     <View className="page">
       <View className="header">
@@ -87,6 +97,7 @@ export default function Index() {
               selectedRegion?.properties?.adcode
             }
             pois={regionPOIs}
+            currentRegionName={currentRegionName}
           />
         </View>
 
@@ -118,6 +129,19 @@ export default function Index() {
                       <View key={`${poi.name}-${index}`} className="poi-item">
                         <Text className="poi-name">{poi.name}</Text>
                         <Text className="poi-type">{typeLabel[poi.type]}</Text>
+                      </View>
+                    ))}
+                  </View>
+                </View>
+              )}
+
+              {regionFoods.length > 0 && (
+                <View className="poi-section">
+                  <Text className="section-title">标志美食</Text>
+                  <View className="poi-list">
+                    {regionFoods.map((food, index) => (
+                      <View key={`${food}-${index}`} className="food-item">
+                        <Text className="food-name">{food}</Text>
                       </View>
                     ))}
                   </View>

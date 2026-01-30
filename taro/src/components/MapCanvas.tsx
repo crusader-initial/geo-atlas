@@ -1,10 +1,11 @@
-import { Canvas, View } from '@tarojs/components';
+import { Canvas, View, Button } from '@tarojs/components';
 import Taro, { useReady } from '@tarojs/taro';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import * as d3Geo from 'd3-geo';
 import { FeatureCollection } from 'geojson';
 import { loadGeoData } from '../utils/mapData';
 import { POI } from '../data/pois';
+import { getFoodsByProvince, getFoodsByCity } from '../data/allFoods';
 
 export type ViewMode = 'name' | 'poi' | 'food' | 'outline';
 
@@ -15,6 +16,7 @@ interface MapCanvasProps {
   selectedRegionId?: string;
   onRegionClick: (feature: any) => void;
   pois?: POI[];
+  currentRegionName?: string;
 }
 
 const CANVAS_ID = 'geo-atlas-canvas';
@@ -25,7 +27,8 @@ export const MapCanvas = ({
   viewMode = 'name',
   selectedRegionId,
   onRegionClick,
-  pois = []
+  pois = [],
+  currentRegionName = ''
 }: MapCanvasProps) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const contextRef = useRef<CanvasRenderingContext2D | null>(null);
@@ -35,6 +38,13 @@ export const MapCanvas = ({
   const [geoData, setGeoData] = useState<FeatureCollection | null>(null);
   const [loading, setLoading] = useState(true);
   const [size, setSize] = useState({ width: 0, height: 0 });
+  const [scale, setScale] = useState(1);
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  
+  // 鼠标拖拽状态
+  const isDraggingRef = useRef(false);
+  const lastMousePosRef = useRef<{ x: number; y: number } | null>(null);
+  const hasDraggedRef = useRef(false);
 
   useReady(() => {
     const query = Taro.createSelectorQuery();
@@ -82,11 +92,22 @@ export const MapCanvas = ({
     };
   }, [dataUrl]);
 
+  // 切换地图时重置缩放和偏移
+  useEffect(() => {
+    setScale(1);
+    setOffset({ x: 0, y: 0 });
+  }, [dataUrl]);
+
   const drawMap = useCallback(() => {
     if (!geoData || !contextRef.current || size.width === 0 || size.height === 0) return;
 
     const ctx = contextRef.current;
     ctx.clearRect(0, 0, size.width, size.height);
+
+    // 应用缩放和平移变换
+    ctx.save();
+    ctx.translate(offset.x, offset.y);
+    ctx.scale(scale, scale);
 
     const projection = d3Geo.geoMercator().fitSize([size.width, size.height], geoData);
     const pathGenerator = d3Geo.geoPath(projection, ctx);
@@ -108,18 +129,53 @@ export const MapCanvas = ({
       const centroid = pathGenerator.centroid(feature as any);
       if (centroid && Number.isFinite(centroid[0]) && Number.isFinite(centroid[1])) {
         ctx.fillStyle = isSelected ? '#ffffff' : '#333333';
-        ctx.font = '10px sans-serif';
+        
+        // 字体跟着缩放放大，但最大不超过 10px
+        // 因为 ctx 已经被 scale 了，所以这里要反向补偿
+        const fontSize = Math.min(8, 10 / scale);
+        ctx.font = `${fontSize}px sans-serif`;
         
         let text = '';
         if (viewMode === 'name') {
           text = feature.properties?.name || '';
         } else if (viewMode === 'food') {
-          // TODO: Fetch food data from properties or external source
-          text = feature.properties?.food || '';
+          // 获取美食数据
+          const provinceFoods = getFoodsByProvince(currentRegionName);
+          if (provinceFoods && level === 'province') {
+            const cityName = feature.properties?.name || '';
+            const cityFood = getFoodsByCity(provinceFoods, cityName);
+            if (cityFood && cityFood.foods.length > 0) {
+              text = cityFood.foods[0]; // 显示第一个美食
+            }
+          }
         }
 
         if (text) {
-          ctx.fillText(text, centroid[0], centroid[1]);
+          // 测量文字尺寸
+          const textMetrics = ctx.measureText(text);
+          const textWidth = textMetrics.width * scale; // 实际渲染的文字宽度
+          const textHeight = fontSize * scale; // 实际渲染的字体大小
+          
+          // 计算区域边界框
+          const bounds = pathGenerator.bounds(feature as any);
+          if (bounds) {
+            const [[x0, y0], [x1, y1]] = bounds;
+            const regionWidth = x1 - x0;
+            const regionHeight = y1 - y0;
+            
+            // 考虑缩放因子
+            const effectiveWidth = regionWidth * scale;
+            const effectiveHeight = regionHeight * scale;
+            
+            // 判断是否有足够空间显示文字（阈值0.8）
+            const canFitWidth = textWidth < effectiveWidth * 0.8;
+            const canFitHeight = textHeight < effectiveHeight * 0.8;
+            
+            // 只有在空间足够时才显示文字
+            if (canFitWidth && canFitHeight) {
+              ctx.fillText(text, centroid[0], centroid[1]);
+            }
+          }
         }
       }
     });
@@ -137,7 +193,10 @@ export const MapCanvas = ({
         ctx.stroke();
       });
     }
-  }, [geoData, pois, selectedRegionId, size.height, size.width, viewMode]);
+
+    // 恢复上下文状态
+    ctx.restore();
+  }, [geoData, pois, selectedRegionId, size.height, size.width, viewMode, currentRegionName, level, scale, offset]);
 
   useEffect(() => {
     drawMap();
@@ -146,6 +205,12 @@ export const MapCanvas = ({
   const handleTap = useCallback(
     (event: any) => {
       if (!geoData || !contextRef.current || !pathRef.current) return;
+
+      // 如果刚刚拖拽过，不触发点击
+      if (hasDraggedRef.current) {
+        hasDraggedRef.current = false;
+        return;
+      }
 
       let x, y;
       // Handle Mini Program Canvas 2D touch coordinates
@@ -172,16 +237,84 @@ export const MapCanvas = ({
 
       for (const feature of geoData.features) {
         const ctx = contextRef.current;
+        
+        // 应用与绘制时相同的变换状态
+        ctx.save();
+        ctx.translate(offset.x, offset.y);
+        ctx.scale(scale, scale);
+        
         ctx.beginPath();
         pathRef.current(feature as any);
+        
+        // 使用原始坐标进行检测
         if (ctx.isPointInPath(x, y)) {
+          ctx.restore();
           onRegionClick(feature);
           break;
         }
+        
+        ctx.restore();
       }
     },
-    [geoData, onRegionClick]
+    [geoData, onRegionClick, scale, offset]
   );
+
+  // 缩放控制函数
+  const handleZoomIn = () => {
+    setScale(prev => Math.min(prev + 0.2, 5));
+  };
+
+  const handleZoomOut = () => {
+    setScale(prev => Math.max(prev - 0.2, 1));
+  };
+
+  // 触摸/鼠标拖拽事件处理
+  const handleDragStart = useCallback((event: any) => {
+    const touches = event.touches || [];
+    if (touches.length === 1) {
+      isDraggingRef.current = true;
+      hasDraggedRef.current = false;
+      const touch = touches[0];
+      // 尝试多种方式获取坐标
+      const x = touch.clientX ?? touch.pageX ?? touch.x ?? 0;
+      const y = touch.clientY ?? touch.pageY ?? touch.y ?? 0;
+      lastMousePosRef.current = { x, y };
+      console.log('开始拖拽，初始位置:', x, y);
+    }
+  }, []);
+
+  const handleDragMove = useCallback((event: any) => {
+    if (!isDraggingRef.current || !lastMousePosRef.current) return;
+    
+    const touches = event.touches || [];
+    if (touches.length !== 1) return;
+
+    const touch = touches[0];
+    // 尝试多种方式获取坐标
+    const currentX = touch.clientX ?? touch.pageX ?? touch.x ?? 0;
+    const currentY = touch.clientY ?? touch.pageY ?? touch.y ?? 0;
+    
+    const dx = currentX - lastMousePosRef.current.x;
+    const dy = currentY - lastMousePosRef.current.y;
+
+    // 只有移动超过一定距离才算拖拽
+    if (Math.abs(dx) > 2 || Math.abs(dy) > 2) {
+      hasDraggedRef.current = true;
+    }
+
+    setOffset(prev => ({
+      x: prev.x + dx,
+      y: prev.y + dy
+    }));
+
+    lastMousePosRef.current = { x: currentX, y: currentY };
+  }, []);
+
+  const handleDragEnd = useCallback(() => {
+    console.log('结束拖拽');
+    isDraggingRef.current = false;
+    lastMousePosRef.current = null;
+  }, []);
 
   return (
     <View className="map-wrapper">
@@ -196,7 +329,20 @@ export const MapCanvas = ({
         canvasId={CANVAS_ID}
         className="map-canvas"
         onTap={handleTap}
+        onTouchStart={handleDragStart}
+        onTouchMove={handleDragMove}
+        onTouchEnd={handleDragEnd}
       />
+      
+      {/* 地图控制按钮 */}
+      <View className="map-controls">
+        <Button className="control-button" onClick={handleZoomIn} disabled={scale >= 5}>
+          +
+        </Button>
+        <Button className="control-button" onClick={handleZoomOut} disabled={scale <= 1}>
+          -
+        </Button>
+      </View>
     </View>
   );
 };
