@@ -181,16 +181,48 @@ export const MapCanvas = ({
     });
 
     if (viewMode === 'poi' && pois.length > 0 && projectionRef.current) {
-      pois.forEach(poi => {
+      console.log('Rendering POIs:', pois.length, 'viewMode:', viewMode);
+      // POI类型颜色映射
+      const poiColors: Record<string, string> = {
+        '景点': '#FF6B6B',      // 红色
+        '火车站': '#4ECDC4',    // 青色
+        '机场': '#45B7D1',      // 蓝色
+        '购物': '#FFA07A',      // 橙色
+        '美食': '#98D8C8',      // 绿色
+        'landmark': '#FF6B6B',
+        'transport': '#4ECDC4',
+        'nature': '#95E1D3',
+        'default': '#1b1b1b'
+      };
+
+      pois.forEach((poi, index) => {
         const point = projectionRef.current?.(poi.coordinates);
-        if (!point) return;
+        if (!point) {
+          console.log('POI projection failed:', poi.name, poi.coordinates);
+          return;
+        }
+        
+        if (index === 0) {
+          console.log('First POI:', poi.name, 'coords:', poi.coordinates, 'point:', point);
+        }
+        
+        // 根据POI类型选择颜色
+        const color = poiColors[poi.type] || poiColors['default'];
+        
         ctx.beginPath();
-        ctx.fillStyle = '#1b1b1b';
+        ctx.fillStyle = color;
         ctx.strokeStyle = '#ffffff';
-        ctx.lineWidth = 2;
-        ctx.arc(point[0], point[1], 5, 0, Math.PI * 2);
+        ctx.lineWidth = 0.5;
+        ctx.arc(point[0], point[1], 2, 0, Math.PI * 2);
         ctx.fill();
         ctx.stroke();
+        
+        // 绘制POI名称
+        if (scale > 1.5) {  // 只在放大时显示名称
+          ctx.fillStyle = '#333333';
+          ctx.font = `${Math.min(7, 10 / scale)}px sans-serif`;
+          ctx.fillText(poi.name, point[0], point[1] + 8);
+        }
       });
     }
 
@@ -204,6 +236,7 @@ export const MapCanvas = ({
 
   const handleTap = useCallback(
     (event: any) => {
+      event.stopPropagation();
       if (!geoData || !contextRef.current || !pathRef.current) return;
 
       // 如果刚刚拖拽过，不触发点击
@@ -249,6 +282,31 @@ export const MapCanvas = ({
         // 使用原始坐标进行检测
         if (ctx.isPointInPath(x, y)) {
           ctx.restore();
+          
+          // 计算区域中心点
+          const centroid = pathRef.current.centroid(feature as any);
+          if (centroid && Number.isFinite(centroid[0]) && Number.isFinite(centroid[1]) && projectionRef.current) {
+            // 目标缩放级别
+            const targetScale = Math.min(scale * 2, 3);
+            
+            // 计算使区域中心位于画布中心所需的偏移量
+            // 画布中心坐标
+            const canvasCenterX = size.width / 2;
+            const canvasCenterY = size.height / 2;
+            
+            // 区域中心在当前变换下的屏幕坐标
+            const regionScreenX = centroid[0] * targetScale + offset.x;
+            const regionScreenY = centroid[1] * targetScale + offset.y;
+            
+            // 计算需要的偏移量，使区域中心移动到画布中心
+            const newOffsetX = canvasCenterX - centroid[0] * targetScale;
+            const newOffsetY = canvasCenterY - centroid[1] * targetScale;
+            
+            // 设置新的缩放和偏移
+            setScale(targetScale);
+            setOffset({ x: newOffsetX, y: newOffsetY });
+          }
+          
           onRegionClick(feature);
           break;
         }
@@ -256,7 +314,7 @@ export const MapCanvas = ({
         ctx.restore();
       }
     },
-    [geoData, onRegionClick, scale, offset]
+    [geoData, onRegionClick, scale, offset, size.width, size.height]
   );
 
   // 缩放控制函数
@@ -270,6 +328,7 @@ export const MapCanvas = ({
 
   // 触摸/鼠标拖拽事件处理
   const handleDragStart = useCallback((event: any) => {
+    event.stopPropagation();
     const touches = event.touches || [];
     if (touches.length === 1) {
       isDraggingRef.current = true;
@@ -285,6 +344,9 @@ export const MapCanvas = ({
 
   const handleDragMove = useCallback((event: any) => {
     if (!isDraggingRef.current || !lastMousePosRef.current) return;
+    
+    event.stopPropagation();
+    event.preventDefault();
     
     const touches = event.touches || [];
     if (touches.length !== 1) return;
@@ -310,14 +372,15 @@ export const MapCanvas = ({
     lastMousePosRef.current = { x: currentX, y: currentY };
   }, []);
 
-  const handleDragEnd = useCallback(() => {
+  const handleDragEnd = useCallback((event: any) => {
+    event.stopPropagation();
     console.log('结束拖拽');
     isDraggingRef.current = false;
     lastMousePosRef.current = null;
   }, []);
 
   return (
-    <View className="map-wrapper">
+    <View className="map-wrapper" catchMove>
       {loading && (
         <View className="map-loading">
           <View className="spinner" />

@@ -1,0 +1,1874 @@
+{
+  "cities": [
+    {
+      "city": "北京",
+      "province": "北京市",
+      "specialty_foods": ["北京烤鸭", "炸酱面", "豆汁儿", "卤煮火烧", "驴打滚", "艾窝窝", "糖葫芦"]
+    },
+    {
+      "city": "上海",
+      "province": "上海市",
+      "specialty_foods": ["小笼包", "生煎包", "红烧肉", "糖醋小排", "响油鳝丝", "葱油拌面", "蟹粉小笼"]
+    },
+    {
+      "city": "天津",
+      "province": "天津市",
+      "specialty_foods": ["狗不理包子", "煎饼果子", "十八街麻花", "耳朵眼炸糕", "锅巴菜", "老豆腐"]
+    },
+    {
+      "city": "重庆",
+      "province": "重庆市",
+      "specialty_foods": ["重庆火锅", "重庆小面", "酸辣粉", "毛血旺", "辣子鸡", "抄手", "烤鱼"]
+    },
+    {
+      "city": "石家庄",
+      "province": "河北省",
+      "specialty_foods": ["金凤扒鸡", "缸炉烧饼", "藁城宫面"]
+    },
+    {
+      "city": "唐山",
+      "province": "河北省",
+      "specialty_foods": ["蜂蜜麻糖", "棋子烧饼", "万里香烧鸡"]
+    },
+    {
+      "city": "秦皇岛",
+      "province": "河北省",
+      "specialty_foods": ["海鲜", "长城饽椤饼", "四条包子"]
+    },
+    {
+      "city": "邯郸",
+      "province": "河北省",
+      "specialty_foods": ["驴肉火烧", "一篓油水饺", "马头天福酥鱼"]
+    },
+    {
+      "city": "邢台",
+      "province": "河北省",
+      "specialty_foods": ["邢台烧饼", "道口烧鸡", "威县火烧"]
+    },
+    {
+      "city": "保定",
+      "province": "河北省",
+      "specialty_foods": ["驴肉火烧", "白运章包子", "槐茂酱菜"]
+    },
+    {
+      "city": "张家口",
+      "province": "河北省",
+      "specialty_foods": ["柴沟堡熏肉", "一窝丝", "蔚州贡米"]
+    },
+    {
+      "city": "承德",
+      "province": "河北省",
+      "specialty_foods": ["羊汤", "驴打滚", "烙糕"]
+    },
+    {
+      "city": "沧州",
+      "province": "河北省",
+      "specialty_foods": ["火锅鸡", "羊肠汤", "驴肉火烧"]
+    },
+    {
+      "city": "廊坊",
+      "province": "河北省",
+      "specialty_foods": ["香河肉饼", "茶汤", "三河豆腐丝"]
+    },
+    {
+      "city": "衡水",
+      "province": "河北省",
+      "specialty_foods": ["衡水老白干", "深州蜜桃", "故城熏肉"]
+    },
+    {
+      "city": "太原",
+      "province": "山西省",
+      "specialty_foods": ["刀削面", "过油肉", "头脑", "莜面栲栳栳", "羊杂割"]
+    },
+    {
+      "city": "大同",
+      "province": "山西省",
+      "specialty_foods": ["刀削面", "浑源凉粉", "黄糕", "羊杂"]
+    },
+    {
+      "city": "阳泉",
+      "province": "山西省",
+      "specialty_foods": ["平定砂锅", "阳泉飘抿曲"]
+    },
+    {
+      "city": "长治",
+      "province": "山西省",
+      "specialty_foods": ["壶关羊汤", "上党腊驴肉", "长子炒饼"]
+    },
+    {
+      "city": "晋城",
+      "province": "山西省",
+      "specialty_foods": ["烧大葱", "高平烧豆腐", "阳城肉罐肉"]
+    },
+    {
+      "city": "朔州",
+      "province": "山西省",
+      "specialty_foods": ["应县羊杂", "怀仁糖干炉"]
+    },
+    {
+      "city": "晋中",
+      "province": "山西省",
+      "specialty_foods": ["平遥牛肉", "太谷饼", "猫耳朵"]
+    },
+    {
+      "city": "运城",
+      "province": "山西省",
+      "specialty_foods": ["解州羊肉泡馍", "闻喜煮饼", "稷山麻花"]
+    },
+    {
+      "city": "忻州",
+      "province": "山西省",
+      "specialty_foods": ["保德碗托", "定襄蒸肉", "代县麻片"]
+    },
+    {
+      "city": "临汾",
+      "province": "山西省",
+      "specialty_foods": ["牛肉丸子面", "太后饼", "羊杂烩"]
+    },
+    {
+      "city": "吕梁",
+      "province": "山西省",
+      "specialty_foods": ["碗团", "柳林芝麻饼", "汾阳石头饼"]
+    },
+    {
+      "city": "呼和浩特",
+      "province": "内蒙古自治区",
+      "specialty_foods": ["烤全羊", "焙子", "羊杂碎", "烧麦", "手把肉"]
+    },
+    {
+      "city": "包头",
+      "province": "内蒙古自治区",
+      "specialty_foods": ["烤全羊", "稍麦", "羊杂碎"]
+    },
+    {
+      "city": "乌海",
+      "province": "内蒙古自治区",
+      "specialty_foods": ["黄河鲤鱼"]
+    },
+    {
+      "city": "赤峰",
+      "province": "内蒙古自治区",
+      "specialty_foods": ["对夹", "哈达饼", "蒙古馅饼"]
+    },
+    {
+      "city": "通辽",
+      "province": "内蒙古自治区",
+      "specialty_foods": ["蒙古馅饼", "烤羊腿", "奶茶"]
+    },
+    {
+      "city": "鄂尔多斯",
+      "province": "内蒙古自治区",
+      "specialty_foods": ["手扒肉", "烤全羊", "羊杂碎"]
+    },
+    {
+      "city": "呼伦贝尔",
+      "province": "内蒙古自治区",
+      "specialty_foods": ["手把肉", "烤羊排", "奶茶", "全鱼宴"]
+    },
+    {
+      "city": "巴彦淖尔",
+      "province": "内蒙古自治区",
+      "specialty_foods": ["烩酸菜", "黄河鲤鱼"]
+    },
+    {
+      "city": "乌兰察布",
+      "province": "内蒙古自治区",
+      "specialty_foods": ["卓资山熏鸡", "武川莜面"]
+    },
+    {
+      "city": "兴安盟",
+      "province": "内蒙古自治区",
+      "specialty_foods": ["手把肉", "奶茶"]
+    },
+    {
+      "city": "锡林郭勒盟",
+      "province": "内蒙古自治区",
+      "specialty_foods": ["手把肉", "烤全羊", "奶豆腐"]
+    },
+    {
+      "city": "阿拉善盟",
+      "province": "内蒙古自治区",
+      "specialty_foods": ["烤全羊", "驼掌"]
+    },
+    {
+      "city": "沈阳",
+      "province": "辽宁省",
+      "specialty_foods": ["老边饺子", "马家烧麦", "熏肉大饼", "鸡架", "李连贵熏肉大饼"]
+    },
+    {
+      "city": "大连",
+      "province": "辽宁省",
+      "specialty_foods": ["海鲜", "焖子", "咸鱼饼子", "铁板鱿鱼"]
+    },
+    {
+      "city": "鞍山",
+      "province": "辽宁省",
+      "specialty_foods": ["海城馅饼", "牛庄馅饼"]
+    },
+    {
+      "city": "抚顺",
+      "province": "辽宁省",
+      "specialty_foods": ["麻辣拌", "抚顺小香肠"]
+    },
+    {
+      "city": "本溪",
+      "province": "辽宁省",
+      "specialty_foods": ["小市羊汤"]
+    },
+    {
+      "city": "丹东",
+      "province": "辽宁省",
+      "specialty_foods": ["黄蚬子", "焖子", "酸汤子"]
+    },
+    {
+      "city": "锦州",
+      "province": "辽宁省",
+      "specialty_foods": ["锦州烧烤", "沟帮子熏鸡", "锦州小菜"]
+    },
+    {
+      "city": "营口",
+      "province": "辽宁省",
+      "specialty_foods": ["营口大酱", "盖州西瓜", "海蜇"]
+    },
+    {
+      "city": "阜新",
+      "province": "辽宁省",
+      "specialty_foods": ["蒙古馅饼", "阜新烧烤"]
+    },
+    {
+      "city": "辽阳",
+      "province": "辽宁省",
+      "specialty_foods": ["辽阳香水梨", "塔糖"]
+    },
+    {
+      "city": "盘锦",
+      "province": "辽宁省",
+      "specialty_foods": ["河蟹", "盘锦大米"]
+    },
+    {
+      "city": "铁岭",
+      "province": "辽宁省",
+      "specialty_foods": ["铁岭榛子", "开原榛子"]
+    },
+    {
+      "city": "朝阳",
+      "province": "辽宁省",
+      "specialty_foods": ["朝阳凌源烧鸡"]
+    },
+    {
+      "city": "葫芦岛",
+      "province": "辽宁省",
+      "specialty_foods": ["海鲜", "葫芦岛虾爬子"]
+    },
+    {
+      "city": "长春",
+      "province": "吉林省",
+      "specialty_foods": ["锅包肉", "酱骨头", "杀猪菜", "烤冷面"]
+    },
+    {
+      "city": "吉林",
+      "province": "吉林省",
+      "specialty_foods": ["乌拉满族火锅", "白肉血肠", "三套碗"]
+    },
+    {
+      "city": "四平",
+      "province": "吉林省",
+      "specialty_foods": ["四平李连贵熏肉大饼"]
+    },
+    {
+      "city": "辽源",
+      "province": "吉林省",
+      "specialty_foods": ["东辽大米"]
+    },
+    {
+      "city": "通化",
+      "province": "吉林省",
+      "specialty_foods": ["朝鲜冷面", "打糕"]
+    },
+    {
+      "city": "白山",
+      "province": "吉林省",
+      "specialty_foods": ["人参鸡", "林蛙"]
+    },
+    {
+      "city": "松原",
+      "province": "吉林省",
+      "specialty_foods": ["查干湖胖头鱼"]
+    },
+    {
+      "city": "白城",
+      "province": "吉林省",
+      "specialty_foods": ["白城油饼"]
+    },
+    {
+      "city": "延边朝鲜族自治州",
+      "province": "吉林省",
+      "specialty_foods": ["朝鲜冷面", "打糕", "石锅拌饭", "米肠", "辣白菜"]
+    },
+    {
+      "city": "哈尔滨",
+      "province": "黑龙江省",
+      "specialty_foods": ["红肠", "大列巴", "锅包肉", "杀猪菜", "东北乱炖", "马迭尔冰棍", "得莫利炖鱼"]
+    },
+    {
+      "city": "齐齐哈尔",
+      "province": "黑龙江省",
+      "specialty_foods": ["烤肉", "杀猪菜", "齐齐哈尔烤肉"]
+    },
+    {
+      "city": "鸡西",
+      "province": "黑龙江省",
+      "specialty_foods": ["鸡西冷面", "辣菜"]
+    },
+    {
+      "city": "鹤岗",
+      "province": "黑龙江省",
+      "specialty_foods": []
+    },
+    {
+      "city": "双鸭山",
+      "province": "黑龙江省",
+      "specialty_foods": []
+    },
+    {
+      "city": "大庆",
+      "province": "黑龙江省",
+      "specialty_foods": ["坑烤"]
+    },
+    {
+      "city": "伊春",
+      "province": "黑龙江省",
+      "specialty_foods": ["蓝莓", "木耳"]
+    },
+    {
+      "city": "佳木斯",
+      "province": "黑龙江省",
+      "specialty_foods": ["全鱼宴"]
+    },
+    {
+      "city": "七台河",
+      "province": "黑龙江省",
+      "specialty_foods": []
+    },
+    {
+      "city": "牡丹江",
+      "province": "黑龙江省",
+      "specialty_foods": ["朝鲜冷面", "镜泊湖鱼"]
+    },
+    {
+      "city": "黑河",
+      "province": "黑龙江省",
+      "specialty_foods": ["俄罗斯大列巴", "鲟鳇鱼"]
+    },
+    {
+      "city": "绥化",
+      "province": "黑龙江省",
+      "specialty_foods": ["海伦大豆"]
+    },
+    {
+      "city": "大兴安岭地区",
+      "province": "黑龙江省",
+      "specialty_foods": ["蓝莓", "黑木耳"]
+    },
+    {
+      "city": "南京",
+      "province": "江苏省",
+      "specialty_foods": ["盐水鸭", "鸭血粉丝汤", "小笼包", "梅花糕", "牛肉锅贴", "桂花糖芋苗"]
+    },
+    {
+      "city": "无锡",
+      "province": "江苏省",
+      "specialty_foods": ["无锡小笼包", "酱排骨", "太湖三白", "无锡油面筋"]
+    },
+    {
+      "city": "徐州",
+      "province": "江苏省",
+      "specialty_foods": ["地锅鸡", "把子肉", "烙馍", "羊肉汤"]
+    },
+    {
+      "city": "常州",
+      "province": "江苏省",
+      "specialty_foods": ["天目湖砂锅鱼头", "大麻糕", "加蟹小笼包"]
+    },
+    {
+      "city": "苏州",
+      "province": "江苏省",
+      "specialty_foods": ["松鼠桂鱼", "阳澄湖大闸蟹", "苏式面", "生煎包", "糕团", "酱鸭", "枫镇大面"]
+    },
+    {
+      "city": "南通",
+      "province": "江苏省",
+      "specialty_foods": ["狼山鸡", "海门羊肉", "跳跳鱼"]
+    },
+    {
+      "city": "连云港",
+      "province": "江苏省",
+      "specialty_foods": ["凉粉", "小鱼煎饼", "花果山云雾茶"]
+    },
+    {
+      "city": "淮安",
+      "province": "江苏省",
+      "specialty_foods": ["淮扬菜", "软兜长鱼", "平桥豆腐", "蟹黄汤包"]
+    },
+    {
+      "city": "盐城",
+      "province": "江苏省",
+      "specialty_foods": ["建湖藕粉圆子", "东台鱼汤面", "盐城大纵湖醉蟹"]
+    },
+    {
+      "city": "扬州",
+      "province": "江苏省",
+      "specialty_foods": ["扬州炒饭", "狮子头", "三丁包", "蟹黄汤包", "大煮干丝"]
+    },
+    {
+      "city": "镇江",
+      "province": "江苏省",
+      "specialty_foods": ["镇江香醋", "锅盖面", "水晶肴蹄", "蟹黄汤包"]
+    },
+    {
+      "city": "泰州",
+      "province": "江苏省",
+      "specialty_foods": ["黄桥烧饼", "靖江蟹黄汤包", "溱湖八鲜"]
+    },
+    {
+      "city": "宿迁",
+      "province": "江苏省",
+      "specialty_foods": ["骆马湖银鱼", "车轮饼"]
+    },
+    {
+      "city": "杭州",
+      "province": "浙江省",
+      "specialty_foods": ["西湖醋鱼", "东坡肉", "龙井虾仁", "叫化鸡", "片儿川", "葱包烩", "定胜糕"]
+    },
+    {
+      "city": "宁波",
+      "province": "浙江省",
+      "specialty_foods": ["汤圆", "海鲜", "宁波年糕", "油赞子"]
+    },
+    {
+      "city": "温州",
+      "province": "浙江省",
+      "specialty_foods": ["鸭舌", "鱼丸", "灯盏糕", "炒粉干"]
+    },
+    {
+      "city": "嘉兴",
+      "province": "浙江省",
+      "specialty_foods": ["粽子", "南湖菱", "文虎酱鸭"]
+    },
+    {
+      "city": "湖州",
+      "province": "浙江省",
+      "specialty_foods": ["湖州粽子", "太湖三白", "周生记馄饨"]
+    },
+    {
+      "city": "绍兴",
+      "province": "浙江省",
+      "specialty_foods": ["臭豆腐", "绍兴黄酒", "梅干菜扣肉", "绍三鲜"]
+    },
+    {
+      "city": "金华",
+      "province": "浙江省",
+      "specialty_foods": ["金华火腿", "金华酥饼", "兰溪鸡子馃"]
+    },
+    {
+      "city": "衢州",
+      "province": "浙江省",
+      "specialty_foods": ["三头一掌", "衢州烤饼", "开化青蛳"]
+    },
+    {
+      "city": "舟山",
+      "province": "浙江省",
+      "specialty_foods": ["海鲜", "舟山带鱼", "海鲜面"]
+    },
+    {
+      "city": "台州",
+      "province": "浙江省",
+      "specialty_foods": ["食饼筒", "姜汁核桃蛋", "蛋清羊尾"]
+    },
+    {
+      "city": "丽水",
+      "province": "浙江省",
+      "specialty_foods": ["缙云烧饼", "景宁田鱼"]
+    },
+    {
+      "city": "合肥",
+      "province": "安徽省",
+      "specialty_foods": ["庐州烤鸭", "包公鱼", "三河米饺", "鸭油烧饼"]
+    },
+    {
+      "city": "芜湖",
+      "province": "安徽省",
+      "specialty_foods": ["虾籽面", "芜湖铁板烧", "小笼汤包"]
+    },
+    {
+      "city": "蚌埠",
+      "province": "安徽省",
+      "specialty_foods": ["烧饼夹里脊", "蚌埠烧饼"]
+    },
+    {
+      "city": "淮南",
+      "province": "安徽省",
+      "specialty_foods": ["豆腐宴", "牛肉汤"]
+    },
+    {
+      "city": "马鞍山",
+      "province": "安徽省",
+      "specialty_foods": ["采石矶茶干", "含山绿茶"]
+    },
+    {
+      "city": "淮北",
+      "province": "安徽省",
+      "specialty_foods": ["淮北面皮", "五香豆腐干"]
+    },
+    {
+      "city": "铜陵",
+      "province": "安徽省",
+      "specialty_foods": ["大通茶干", "铜陵姜"]
+    },
+    {
+      "city": "安庆",
+      "province": "安徽省",
+      "specialty_foods": ["胡玉美蚕豆酱", "江毛水饺", "墨子酥"]
+    },
+    {
+      "city": "黄山",
+      "province": "安徽省",
+      "specialty_foods": ["徽州臭鳜鱼", "毛豆腐", "黄山烧饼", "徽州刀板香"]
+    },
+    {
+      "city": "滁州",
+      "province": "安徽省",
+      "specialty_foods": ["琅琊酥糖", "滁菊"]
+    },
+    {
+      "city": "阜阳",
+      "province": "安徽省",
+      "specialty_foods": ["格拉条", "撒汤", "枕头馍"]
+    },
+    {
+      "city": "宿州",
+      "province": "安徽省",
+      "specialty_foods": ["符离集烧鸡", "萧县面皮"]
+    },
+    {
+      "city": "六安",
+      "province": "安徽省",
+      "specialty_foods": ["六安瓜片", "皖西白鹅"]
+    },
+    {
+      "city": "亳州",
+      "province": "安徽省",
+      "specialty_foods": ["牛肉馍", "义门熏牛肉"]
+    },
+    {
+      "city": "池州",
+      "province": "安徽省",
+      "specialty_foods": ["贵池小粑"]
+    },
+    {
+      "city": "宣城",
+      "province": "安徽省",
+      "specialty_foods": ["宁国粑粑", "水阳三宝"]
+    },
+    {
+      "city": "福州",
+      "province": "福建省",
+      "specialty_foods": ["佛跳墙", "肉燕", "鱼丸", "荔枝肉", "线面"]
+    },
+    {
+      "city": "厦门",
+      "province": "福建省",
+      "specialty_foods": ["沙茶面", "海蛎煎", "土笋冻", "烧肉粽", "鱼丸汤", "花生汤", "姜母鸭"]
+    },
+    {
+      "city": "莆田",
+      "province": "福建省",
+      "specialty_foods": ["莆田卤面", "兴化米粉", "海蛎饼"]
+    },
+    {
+      "city": "三明",
+      "province": "福建省",
+      "specialty_foods": ["沙县小吃", "尤溪板鸭", "永安笋干"]
+    },
+    {
+      "city": "泉州",
+      "province": "福建省",
+      "specialty_foods": ["面线糊", "肉粽", "洪濑鸡爪", "牛肉羹"]
+    },
+    {
+      "city": "漳州",
+      "province": "福建省",
+      "specialty_foods": ["卤面", "蚵仔煎", "手抓面", "四果汤"]
+    },
+    {
+      "city": "南平",
+      "province": "福建省",
+      "specialty_foods": ["光饼", "武夷岩茶"]
+    },
+    {
+      "city": "龙岩",
+      "province": "福建省",
+      "specialty_foods": ["客家菜", "上杭鱼白", "长汀豆腐干"]
+    },
+    {
+      "city": "宁德",
+      "province": "福建省",
+      "specialty_foods": ["肉片", "光饼", "福鼎肉片"]
+    },
+    {
+      "city": "南昌",
+      "province": "江西省",
+      "specialty_foods": ["瓦罐汤", "南昌米粉", "白糖糕", "牛肉炒粉"]
+    },
+    {
+      "city": "景德镇",
+      "province": "江西省",
+      "specialty_foods": ["饺子粑", "冷粉", "碱水粑"]
+    },
+    {
+      "city": "萍乡",
+      "province": "江西省",
+      "specialty_foods": ["萍乡炒粉", "莲花血鸭"]
+    },
+    {
+      "city": "九江",
+      "province": "江西省",
+      "specialty_foods": ["庐山云雾茶", "九江茶饼", "桂花酥糖"]
+    },
+    {
+      "city": "新余",
+      "province": "江西省",
+      "specialty_foods": ["新余麻辣烫"]
+    },
+    {
+      "city": "鹰潭",
+      "province": "江西省",
+      "specialty_foods": ["捺菜"]
+    },
+    {
+      "city": "赣州",
+      "province": "江西省",
+      "specialty_foods": ["客家菜", "鱼饼", "兴国米粉鱼", "赣南脐橙"]
+    },
+    {
+      "city": "吉安",
+      "province": "江西省",
+      "specialty_foods": ["安福火腿", "薄酥饼"]
+    },
+    {
+      "city": "宜春",
+      "province": "江西省",
+      "specialty_foods": ["丰城冻米糖", "扎粉"]
+    },
+    {
+      "city": "抚州",
+      "province": "江西省",
+      "specialty_foods": ["南丰蜜桔", "临川菜梗"]
+    },
+    {
+      "city": "上饶",
+      "province": "江西省",
+      "specialty_foods": ["铅山烫粉", "鸡腿"]
+    },
+    {
+      "city": "济南",
+      "province": "山东省",
+      "specialty_foods": ["把子肉", "油旋", "甜沫", "九转大肠"]
+    },
+    {
+      "city": "青岛",
+      "province": "山东省",
+      "specialty_foods": ["青岛啤酒", "海鲜", "烤鱿鱼", "排骨米饭", "鲅鱼饺子", "锅贴", "海菜凉粉"]
+    },
+    {
+      "city": "淄博",
+      "province": "山东省",
+      "specialty_foods": ["淄博烧烤", "博山酥锅", "周村烧饼"]
+    },
+    {
+      "city": "枣庄",
+      "province": "山东省",
+      "specialty_foods": ["菜煎饼", "羊肉汤", "辣子鸡"]
+    },
+    {
+      "city": "东营",
+      "province": "山东省",
+      "specialty_foods": ["黄河刀鱼", "东营水煎包"]
+    },
+    {
+      "city": "烟台",
+      "province": "山东省",
+      "specialty_foods": ["海鲜", "烟台焖子", "蓬莱小面", "鲅鱼水饺"]
+    },
+    {
+      "city": "潍坊",
+      "province": "山东省",
+      "specialty_foods": ["朝天锅", "肉火烧", "潍坊肉火烧"]
+    },
+    {
+      "city": "济宁",
+      "province": "山东省",
+      "specialty_foods": ["甏肉干饭", "孔府菜", "鱼台羊肉汤"]
+    },
+    {
+      "city": "泰安",
+      "province": "山东省",
+      "specialty_foods": ["泰山煎饼", "白菜豆腐"]
+    },
+    {
+      "city": "威海",
+      "province": "山东省",
+      "specialty_foods": ["海鲜", "威海大花生", "鲅鱼水饺"]
+    },
+    {
+      "city": "日照",
+      "province": "山东省",
+      "specialty_foods": ["海鲜", "煎饼"]
+    },
+    {
+      "city": "临沂",
+      "province": "山东省",
+      "specialty_foods": ["煎饼卷大葱", "糁", "八宝豆豉"]
+    },
+    {
+      "city": "德州",
+      "province": "山东省",
+      "specialty_foods": ["德州扒鸡", "保店驴肉"]
+    },
+    {
+      "city": "聊城",
+      "province": "山东省",
+      "specialty_foods": ["东阿阿胶", "魏氏熏鸡"]
+    },
+    {
+      "city": "滨州",
+      "province": "山东省",
+      "specialty_foods": ["锅子饼"]
+    },
+    {
+      "city": "菏泽",
+      "province": "山东省",
+      "specialty_foods": ["单县羊肉汤", "曹州烧饼"]
+    },
+    {
+      "city": "郑州",
+      "province": "河南省",
+      "specialty_foods": ["烩面", "胡辣汤", "焖饼", "桶子鸡"]
+    },
+    {
+      "city": "开封",
+      "province": "河南省",
+      "specialty_foods": ["灌汤包", "鲤鱼焙面", "羊肉炕馍"]
+    },
+    {
+      "city": "洛阳",
+      "province": "河南省",
+      "specialty_foods": ["水席", "牛肉汤", "浆面条", "不翻汤"]
+    },
+    {
+      "city": "平顶山",
+      "province": "河南省",
+      "specialty_foods": ["郏县饸饹面", "叶县烩面"]
+    },
+    {
+      "city": "安阳",
+      "province": "河南省",
+      "specialty_foods": ["扁粉菜", "道口烧鸡", "血糕"]
+    },
+    {
+      "city": "鹤壁",
+      "province": "河南省",
+      "specialty_foods": ["缠丝鸡蛋", "子馍"]
+    },
+    {
+      "city": "新乡",
+      "province": "河南省",
+      "specialty_foods": ["红焖羊肉", "延津火烧"]
+    },
+    {
+      "city": "焦作",
+      "province": "河南省",
+      "specialty_foods": ["武陟油茶", "四大怀药"]
+    },
+    {
+      "city": "濮阳",
+      "province": "河南省",
+      "specialty_foods": ["壮馍"]
+    },
+    {
+      "city": "许昌",
+      "province": "河南省",
+      "specialty_foods": ["禹州粉条", "热豆腐"]
+    },
+    {
+      "city": "漯河",
+      "province": "河南省",
+      "specialty_foods": ["北舞渡胡辣汤"]
+    },
+    {
+      "city": "三门峡",
+      "province": "河南省",
+      "specialty_foods": ["大刀面", "观音堂牛肉"]
+    },
+    {
+      "city": "南阳",
+      "province": "河南省",
+      "specialty_foods": ["黄牛肉", "新野板面"]
+    },
+    {
+      "city": "商丘",
+      "province": "河南省",
+      "specialty_foods": ["垛子羊肉", "虞城界沟烧鸡"]
+    },
+    {
+      "city": "信阳",
+      "province": "河南省",
+      "specialty_foods": ["信阳毛尖", "热干面", "南湾鱼"]
+    },
+    {
+      "city": "周口",
+      "province": "河南省",
+      "specialty_foods": ["邓城猪蹄", "逍遥胡辣汤"]
+    },
+    {
+      "city": "驻马店",
+      "province": "河南省",
+      "specialty_foods": ["确山板栗", "平舆白芝麻"]
+    },
+    {
+      "city": "济源",
+      "province": "河南省",
+      "specialty_foods": ["土馍"]
+    },
+    {
+      "city": "武汉",
+      "province": "湖北省",
+      "specialty_foods": ["热干面", "豆皮", "鸭脖", "面窝", "糊汤粉", "排骨藕汤", "烧梅"]
+    },
+    {
+      "city": "黄石",
+      "province": "湖北省",
+      "specialty_foods": ["港饼", "黄石松花皮蛋"]
+    },
+    {
+      "city": "十堰",
+      "province": "湖北省",
+      "specialty_foods": ["郧阳三合汤", "房县小花菇"]
+    },
+    {
+      "city": "宜昌",
+      "province": "湖北省",
+      "specialty_foods": ["萝卜饺子", "凉虾", "顶顶糕"]
+    },
+    {
+      "city": "襄阳",
+      "province": "湖北省",
+      "specialty_foods": ["牛肉面", "襄阳大头菜", "清汤"]
+    },
+    {
+      "city": "鄂州",
+      "province": "湖北省",
+      "specialty_foods": ["武昌鱼", "东坡饼"]
+    },
+    {
+      "city": "荆门",
+      "province": "湖北省",
+      "specialty_foods": ["长湖鱼糕", "盘龙菜"]
+    },
+    {
+      "city": "孝感",
+      "province": "湖北省",
+      "specialty_foods": ["孝感米酒", "云梦鱼面"]
+    },
+    {
+      "city": "荆州",
+      "province": "湖北省",
+      "specialty_foods": ["鱼糕", "早堂面", "公安牛肉"]
+    },
+    {
+      "city": "黄冈",
+      "province": "湖北省",
+      "specialty_foods": ["东坡肉", "黄州烧梅"]
+    },
+    {
+      "city": "咸宁",
+      "province": "湖北省",
+      "specialty_foods": ["贺胜鸡汤", "嘉鱼鱼圆"]
+    },
+    {
+      "city": "随州",
+      "province": "湖北省",
+      "specialty_foods": ["随州拐子饭", "三鲜"]
+    },
+    {
+      "city": "恩施土家族苗族自治州",
+      "province": "湖北省",
+      "specialty_foods": ["油茶汤", "格格", "炕洋芋", "腊肉"]
+    },
+    {
+      "city": "仙桃",
+      "province": "湖北省",
+      "specialty_foods": ["沔阳三蒸"]
+    },
+    {
+      "city": "潜江",
+      "province": "湖北省",
+      "specialty_foods": ["小龙虾"]
+    },
+    {
+      "city": "天门",
+      "province": "湖北省",
+      "specialty_foods": ["锅盔", "蒸菜"]
+    },
+    {
+      "city": "神农架林区",
+      "province": "湖北省",
+      "specialty_foods": ["腊肉"]
+    },
+    {
+      "city": "长沙",
+      "province": "湖南省",
+      "specialty_foods": ["臭豆腐", "口味虾", "剁椒鱼头", "糖油粑粑", "米粉", "姊妹团子", "德园包子"]
+    },
+    {
+      "city": "株洲",
+      "province": "湖南省",
+      "specialty_foods": ["攸县血鸭", "醴陵烟熏肉"]
+    },
+    {
+      "city": "湘潭",
+      "province": "湖南省",
+      "specialty_foods": ["毛家红烧肉", "湘潭龙牌酱油"]
+    },
+    {
+      "city": "衡阳",
+      "province": "湖南省",
+      "specialty_foods": ["鱼粉", "衡阳卤粉", "衡东土菜"]
+    },
+    {
+      "city": "邵阳",
+      "province": "湖南省",
+      "specialty_foods": ["猪血丸子", "邵阳米粉"]
+    },
+    {
+      "city": "岳阳",
+      "province": "湖南省",
+      "specialty_foods": ["君山银针茶", "洞庭银鱼"]
+    },
+    {
+      "city": "常德",
+      "province": "湖南省",
+      "specialty_foods": ["米粉", "钵子菜", "擂茶"]
+    },
+    {
+      "city": "张家界",
+      "province": "湖南省",
+      "specialty_foods": ["三下锅", "土家腊肉"]
+    },
+    {
+      "city": "益阳",
+      "province": "湖南省",
+      "specialty_foods": ["安化黑茶", "松花皮蛋"]
+    },
+    {
+      "city": "郴州",
+      "province": "湖南省",
+      "specialty_foods": ["鱼粉", "东江鱼"]
+    },
+    {
+      "city": "永州",
+      "province": "湖南省",
+      "specialty_foods": ["血鸭", "道州扎肉"]
+    },
+    {
+      "city": "怀化",
+      "province": "湖南省",
+      "specialty_foods": ["芷江鸭", "洪江血粑鸭"]
+    },
+    {
+      "city": "娄底",
+      "province": "湖南省",
+      "specialty_foods": ["新化三合汤"]
+    },
+    {
+      "city": "湘西土家族苗族自治州",
+      "province": "湖南省",
+      "specialty_foods": ["血粑鸭", "腊肉", "米豆腐", "社饭"]
+    },
+    {
+      "city": "广州",
+      "province": "广东省",
+      "specialty_foods": ["广式早茶", "肠粉", "虾饺", "烧鹅", "云吞面", "艇仔粥", "双皮奶"]
+    },
+    {
+      "city": "韶关",
+      "province": "广东省",
+      "specialty_foods": ["南雄板鸭", "乳源腐竹"]
+    },
+    {
+      "city": "深圳",
+      "province": "广东省",
+      "specialty_foods": ["沙井鲜蚝", "光明乳鸽", "潮汕牛肉火锅"]
+    },
+    {
+      "city": "珠海",
+      "province": "广东省",
+      "specialty_foods": ["横琴蚝", "斗门重壳蟹"]
+    },
+    {
+      "city": "汕头",
+      "province": "广东省",
+      "specialty_foods": ["潮汕牛肉丸", "肠粉", "蚝烙", "粿条"]
+    },
+    {
+      "city": "佛山",
+      "province": "广东省",
+      "specialty_foods": ["顺德双皮奶", "盲公饼", "伦教糕"]
+    },
+    {
+      "city": "江门",
+      "province": "广东省",
+      "specialty_foods": ["杜阮凉瓜", "新会陈皮"]
+    },
+    {
+      "city": "湛江",
+      "province": "广东省",
+      "specialty_foods": ["白切鸡", "生蚝", "湛江虾"]
+    },
+    {
+      "city": "茂名",
+      "province": "广东省",
+      "specialty_foods": ["电白荔枝", "化州橘红"]
+    },
+    {
+      "city": "肇庆",
+      "province": "广东省",
+      "specialty_foods": ["裹蒸粽", "德庆贡柑"]
+    },
+    {
+      "city": "惠州",
+      "province": "广东省",
+      "specialty_foods": ["东江盐焗鸡", "梅菜扣肉"]
+    },
+    {
+      "city": "梅州",
+      "province": "广东省",
+      "specialty_foods": ["客家酿豆腐", "盐焗鸡", "梅菜扣肉"]
+    },
+    {
+      "city": "汕尾",
+      "province": "广东省",
+      "specialty_foods": ["海陆丰小吃", "菜粿"]
+    },
+    {
+      "city": "河源",
+      "province": "广东省",
+      "specialty_foods": ["客家盐焗鸡", "东江酿豆腐"]
+    },
+    {
+      "city": "阳江",
+      "province": "广东省",
+      "specialty_foods": ["猪肠碌", "阳江豆豉"]
+    },
+    {
+      "city": "清远",
+      "province": "广东省",
+      "specialty_foods": ["清远鸡", "刀切糍"]
+    },
+    {
+      "city": "东莞",
+      "province": "广东省",
+      "specialty_foods": ["荔枝", "腊肠"]
+    },
+    {
+      "city": "中山",
+      "province": "广东省",
+      "specialty_foods": ["杏仁饼", "石岐乳鸽"]
+    },
+    {
+      "city": "潮州",
+      "province": "广东省",
+      "specialty_foods": ["潮州卤鹅", "粿条", "蚝烙", "牛肉丸"]
+    },
+    {
+      "city": "揭阳",
+      "province": "广东省",
+      "specialty_foods": ["普宁豆干", "揭阳乒乓粿"]
+    },
+    {
+      "city": "云浮",
+      "province": "广东省",
+      "specialty_foods": ["罗定豆豉鸡", "郁南无核黄皮"]
+    },
+    {
+      "city": "南宁",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["老友粉", "柠檬鸭", "粉虫", "卷筒粉"]
+    },
+    {
+      "city": "柳州",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["螺蛳粉", "柳州酸", "云片糕"]
+    },
+    {
+      "city": "桂林",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["桂林米粉", "啤酒鱼", "松糕", "马蹄糕"]
+    },
+    {
+      "city": "梧州",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["龟苓膏", "冰泉豆浆", "纸包鸡"]
+    },
+    {
+      "city": "北海",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["海鲜", "沙虫", "侨港糖水"]
+    },
+    {
+      "city": "防城港",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["海鲜", "京族风吹饼"]
+    },
+    {
+      "city": "钦州",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["大蚝", "猪脚粉"]
+    },
+    {
+      "city": "贵港",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["桥圩鸭", "平南石硖龙眼"]
+    },
+    {
+      "city": "玉林",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["牛巴", "玉林肉蛋"]
+    },
+    {
+      "city": "百色",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["芒果", "田七鸡"]
+    },
+    {
+      "city": "贺州",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["黄姚豆豉", "牛肠酸"]
+    },
+    {
+      "city": "河池",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["环江香牛", "巴马香猪"]
+    },
+    {
+      "city": "来宾",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["忻城玉米"]
+    },
+    {
+      "city": "崇左",
+      "province": "广西壮族自治区",
+      "specialty_foods": ["龙州鸡粽"]
+    },
+    {
+      "city": "海口",
+      "province": "海南省",
+      "specialty_foods": ["文昌鸡", "清补凉", "海南粉", "抱罗粉"]
+    },
+    {
+      "city": "三亚",
+      "province": "海南省",
+      "specialty_foods": ["海鲜", "椰子鸡", "文昌鸡", "四角豆"]
+    },
+    {
+      "city": "三沙",
+      "province": "海南省",
+      "specialty_foods": ["海鲜"]
+    },
+    {
+      "city": "儋州",
+      "province": "海南省",
+      "specialty_foods": ["米烂", "那大狗肉"]
+    },
+    {
+      "city": "五指山",
+      "province": "海南省",
+      "specialty_foods": ["五脚猪", "山兰酒"]
+    },
+    {
+      "city": "琼海",
+      "province": "海南省",
+      "specialty_foods": ["嘉积鸭"]
+    },
+    {
+      "city": "文昌",
+      "province": "海南省",
+      "specialty_foods": ["文昌鸡", "抱罗粉"]
+    },
+    {
+      "city": "万宁",
+      "province": "海南省",
+      "specialty_foods": ["东山羊", "和乐蟹"]
+    },
+    {
+      "city": "东方",
+      "province": "海南省",
+      "specialty_foods": ["四更烤乳猪"]
+    },
+    {
+      "city": "定安",
+      "province": "海南省",
+      "specialty_foods": ["定安粽子"]
+    },
+    {
+      "city": "屯昌",
+      "province": "海南省",
+      "specialty_foods": ["屯昌黑猪"]
+    },
+    {
+      "city": "澄迈",
+      "province": "海南省",
+      "specialty_foods": ["福山咖啡", "白莲鹅"]
+    },
+    {
+      "city": "临高",
+      "province": "海南省",
+      "specialty_foods": ["临高乳猪"]
+    },
+    {
+      "city": "白沙黎族自治县",
+      "province": "海南省",
+      "specialty_foods": []
+    },
+    {
+      "city": "昌江黎族自治县",
+      "province": "海南省",
+      "specialty_foods": ["黎族竹筒饭"]
+    },
+    {
+      "city": "乐东黎族自治县",
+      "province": "海南省",
+      "specialty_foods": ["黄流老鸭"]
+    },
+    {
+      "city": "陵水黎族自治县",
+      "province": "海南省",
+      "specialty_foods": ["酸粉"]
+    },
+    {
+      "city": "保亭黎族苗族自治县",
+      "province": "海南省",
+      "specialty_foods": ["竹筒饭"]
+    },
+    {
+      "city": "琼中黎族苗族自治县",
+      "province": "海南省",
+      "specialty_foods": ["山兰酒"]
+    },
+    {
+      "city": "成都",
+      "province": "四川省",
+      "specialty_foods": ["火锅", "麻婆豆腐", "担担面", "龙抄手", "夫妻肺片", "钟水饺", "串串香"]
+    },
+    {
+      "city": "自贡",
+      "province": "四川省",
+      "specialty_foods": ["盐帮菜", "冷吃兔", "火边子牛肉"]
+    },
+    {
+      "city": "攀枝花",
+      "province": "四川省",
+      "specialty_foods": ["盐边羊肉米线", "攀枝花芒果"]
+    },
+    {
+      "city": "泸州",
+      "province": "四川省",
+      "specialty_foods": ["泸州老窖", "白糕", "猪儿粑"]
+    },
+    {
+      "city": "德阳",
+      "province": "四川省",
+      "specialty_foods": ["什邡板鸭", "中江挂面"]
+    },
+    {
+      "city": "绵阳",
+      "province": "四川省",
+      "specialty_foods": ["梓潼酥饼", "绵阳米粉"]
+    },
+    {
+      "city": "广元",
+      "province": "四川省",
+      "specialty_foods": ["女皇蒸凉面", "剑门豆腐"]
+    },
+    {
+      "city": "遂宁",
+      "province": "四川省",
+      "specialty_foods": ["蓬溪姜糕"]
+    },
+    {
+      "city": "内江",
+      "province": "四川省",
+      "specialty_foods": ["牛肉面", "资中鲶鱼"]
+    },
+    {
+      "city": "乐山",
+      "province": "四川省",
+      "specialty_foods": ["钵钵鸡", "甜皮鸭", "跷脚牛肉"]
+    },
+    {
+      "city": "南充",
+      "province": "四川省",
+      "specialty_foods": ["锅盔灌凉粉", "张飞牛肉"]
+    },
+    {
+      "city": "眉山",
+      "province": "四川省",
+      "specialty_foods": ["东坡肘子", "东坡鱼"]
+    },
+    {
+      "city": "宜宾",
+      "province": "四川省",
+      "specialty_foods": ["燃面", "宜宾糟蛋", "李庄白肉"]
+    },
+    {
+      "city": "广安",
+      "province": "四川省",
+      "specialty_foods": ["岳池米粉"]
+    },
+    {
+      "city": "达州",
+      "province": "四川省",
+      "specialty_foods": ["灯影牛肉", "万源老腊肉"]
+    },
+    {
+      "city": "雅安",
+      "province": "四川省",
+      "specialty_foods": ["雅鱼", "蒙顶山茶"]
+    },
+    {
+      "city": "巴中",
+      "province": "四川省",
+      "specialty_foods": ["通江银耳"]
+    },
+    {
+      "city": "资阳",
+      "province": "四川省",
+      "specialty_foods": ["简阳羊肉汤"]
+    },
+    {
+      "city": "阿坝藏族羌族自治州",
+      "province": "四川省",
+      "specialty_foods": ["酥油茶", "青稞酒", "牦牛肉"]
+    },
+    {
+      "city": "甘孜藏族自治州",
+      "province": "四川省",
+      "specialty_foods": ["酥油茶", "糌粑", "牦牛肉"]
+    },
+    {
+      "city": "凉山彝族自治州",
+      "province": "四川省",
+      "specialty_foods": ["坨坨肉", "彝族酸菜汤"]
+    },
+    {
+      "city": "贵阳",
+      "province": "贵州省",
+      "specialty_foods": ["肠旺面", "丝娃娃", "酸汤鱼", "花溪牛肉粉"]
+    },
+    {
+      "city": "六盘水",
+      "province": "贵州省",
+      "specialty_foods": ["羊肉粉", "水城烙锅"]
+    },
+    {
+      "city": "遵义",
+      "province": "贵州省",
+      "specialty_foods": ["羊肉粉", "豆花面", "鸭溪凉粉"]
+    },
+    {
+      "city": "安顺",
+      "province": "贵州省",
+      "specialty_foods": ["裹卷", "波波糖"]
+    },
+    {
+      "city": "毕节",
+      "province": "贵州省",
+      "specialty_foods": ["威宁荞酥", "大方豆干"]
+    },
+    {
+      "city": "铜仁",
+      "province": "贵州省",
+      "specialty_foods": ["社饭", "绿豆粉"]
+    },
+    {
+      "city": "黔西南布依族苗族自治州",
+      "province": "贵州省",
+      "specialty_foods": ["刷把头", "鸡肉汤圆"]
+    },
+    {
+      "city": "黔东南苗族侗族自治州",
+      "province": "贵州省",
+      "specialty_foods": ["酸汤鱼", "牛瘪", "侗族腌鱼"]
+    },
+    {
+      "city": "黔南布依族苗族自治州",
+      "province": "贵州省",
+      "specialty_foods": ["都匀毛尖茶", "虾酸牛肉"]
+    },
+    {
+      "city": "昆明",
+      "province": "云南省",
+      "specialty_foods": ["过桥米线", "汽锅鸡", "鲜花饼", "烧饵块"]
+    },
+    {
+      "city": "曲靖",
+      "province": "云南省",
+      "specialty_foods": ["宣威火腿", "蒸饵丝"]
+    },
+    {
+      "city": "玉溪",
+      "province": "云南省",
+      "specialty_foods": ["江川三道菜", "通海豆末糖"]
+    },
+    {
+      "city": "保山",
+      "province": "云南省",
+      "specialty_foods": ["大救驾", "腾冲饵丝"]
+    },
+    {
+      "city": "昭通",
+      "province": "云南省",
+      "specialty_foods": ["天麻火腿鸡", "昭通酱"]
+    },
+    {
+      "city": "丽江",
+      "province": "云南省",
+      "specialty_foods": ["腊排骨火锅", "鸡豆凉粉", "纳西烤肉"]
+    },
+    {
+      "city": "普洱",
+      "province": "云南省",
+      "specialty_foods": ["普洱茶"]
+    },
+    {
+      "city": "临沧",
+      "province": "云南省",
+      "specialty_foods": ["临沧火腿"]
+    },
+    {
+      "city": "楚雄彝族自治州",
+      "province": "云南省",
+      "specialty_foods": ["彝族火把肉", "野生菌"]
+    },
+    {
+      "city": "红河哈尼族彝族自治州",
+      "province": "云南省",
+      "specialty_foods": ["建水豆腐", "过桥米线", "蒙自年糕"]
+    },
+    {
+      "city": "文山壮族苗族自治州",
+      "province": "云南省",
+      "specialty_foods": ["三七", "椒盐饼"]
+    },
+    {
+      "city": "西双版纳傣族自治州",
+      "province": "云南省",
+      "specialty_foods": ["傣味烤鱼", "香茅草烤鸡", "菠萝饭"]
+    },
+    {
+      "city": "大理白族自治州",
+      "province": "云南省",
+      "specialty_foods": ["饵丝", "乳扇", "喜洲粑粑", "大理砂锅鱼"]
+    },
+    {
+      "city": "德宏傣族景颇族自治州",
+      "province": "云南省",
+      "specialty_foods": ["撒撇", "傣味烤肉"]
+    },
+    {
+      "city": "怒江傈僳族自治州",
+      "province": "云南省",
+      "specialty_foods": ["石板粑粑", "漆油鸡"]
+    },
+    {
+      "city": "迪庆藏族自治州",
+      "province": "云南省",
+      "specialty_foods": ["酥油茶", "糌粑", "牦牛肉"]
+    },
+    {
+      "city": "拉萨",
+      "province": "西藏自治区",
+      "specialty_foods": ["酥油茶", "糌粑", "青稞酒", "藏面", "牦牛肉"]
+    },
+    {
+      "city": "日喀则",
+      "province": "西藏自治区",
+      "specialty_foods": ["糌粑", "牦牛肉", "酥油茶"]
+    },
+    {
+      "city": "昌都",
+      "province": "西藏自治区",
+      "specialty_foods": ["风干牦牛肉", "酥油茶"]
+    },
+    {
+      "city": "林芝",
+      "province": "西藏自治区",
+      "specialty_foods": ["松茸", "藏香猪"]
+    },
+    {
+      "city": "山南",
+      "province": "西藏自治区",
+      "specialty_foods": ["藏式火锅", "酥油茶"]
+    },
+    {
+      "city": "那曲",
+      "province": "西藏自治区",
+      "specialty_foods": ["风干牦牛肉", "虫草"]
+    },
+    {
+      "city": "阿里地区",
+      "province": "西藏自治区",
+      "specialty_foods": ["糌粑", "牦牛肉"]
+    },
+    {
+      "city": "西安",
+      "province": "陕西省",
+      "specialty_foods": ["肉夹馍", "羊肉泡馍", "凉皮", "biangbiang面", "葫芦头", "灌汤包", "臊子面"]
+    },
+    {
+      "city": "铜川",
+      "province": "陕西省",
+      "specialty_foods": ["窝窝面", "咸汤面"]
+    },
+    {
+      "city": "宝鸡",
+      "province": "陕西省",
+      "specialty_foods": ["擀面皮", "臊子面", "岐山哨子面"]
+    },
+    {
+      "city": "咸阳",
+      "province": "陕西省",
+      "specialty_foods": ["biangbiang面", "三原蓼花糖"]
+    },
+    {
+      "city": "渭南",
+      "province": "陕西省",
+      "specialty_foods": ["时辰包子", "水盆羊肉"]
+    },
+    {
+      "city": "延安",
+      "province": "陕西省",
+      "specialty_foods": ["羊杂碎", "洋芋擦擦"]
+    },
+    {
+      "city": "汉中",
+      "province": "陕西省",
+      "specialty_foods": ["热米皮", "菜豆腐"]
+    },
+    {
+      "city": "榆林",
+      "province": "陕西省",
+      "specialty_foods": ["羊杂碎", "炖羊肉", "拼三鲜"]
+    },
+    {
+      "city": "安康",
+      "province": "陕西省",
+      "specialty_foods": ["蒸面", "安康窝窝面"]
+    },
+    {
+      "city": "商洛",
+      "province": "陕西省",
+      "specialty_foods": ["柿子糊塌", "商南茶"]
+    },
+    {
+      "city": "兰州",
+      "province": "甘肃省",
+      "specialty_foods": ["兰州拉面", "酿皮", "甜醅", "灰豆子"]
+    },
+    {
+      "city": "嘉峪关",
+      "province": "甘肃省",
+      "specialty_foods": ["烤羊肉", "拉条子"]
+    },
+    {
+      "city": "金昌",
+      "province": "甘肃省",
+      "specialty_foods": ["永昌羊肉"]
+    },
+    {
+      "city": "白银",
+      "province": "甘肃省",
+      "specialty_foods": ["靖远羊羔肉"]
+    },
+    {
+      "city": "天水",
+      "province": "甘肃省",
+      "specialty_foods": ["呱呱", "浆水面", "天水麻辣烫"]
+    },
+    {
+      "city": "武威",
+      "province": "甘肃省",
+      "specialty_foods": ["凉州熏醋", "三套车"]
+    },
+    {
+      "city": "张掖",
+      "province": "甘肃省",
+      "specialty_foods": ["搓鱼子", "卷子鸡"]
+    },
+    {
+      "city": "平凉",
+      "province": "甘肃省",
+      "specialty_foods": ["平凉红牛", "锅盔"]
+    },
+    {
+      "city": "酒泉",
+      "province": "甘肃省",
+      "specialty_foods": ["糊锅", "驴肉黄面"]
+    },
+    {
+      "city": "庆阳",
+      "province": "甘肃省",
+      "specialty_foods": ["环县羊羔肉", "庆阳臊子面"]
+    },
+    {
+      "city": "定西",
+      "province": "甘肃省",
+      "specialty_foods": ["当归鸡", "洋芋"]
+    },
+    {
+      "city": "陇南",
+      "province": "甘肃省",
+      "specialty_foods": ["洋芋搅团"]
+    },
+    {
+      "city": "临夏回族自治州",
+      "province": "甘肃省",
+      "specialty_foods": ["河州包子", "手抓羊肉"]
+    },
+    {
+      "city": "甘南藏族自治州",
+      "province": "甘肃省",
+      "specialty_foods": ["酥油茶", "糌粑", "藏包"]
+    },
+    {
+      "city": "西宁",
+      "province": "青海省",
+      "specialty_foods": ["手抓羊肉", "酿皮", "甜醅", "酸奶"]
+    },
+    {
+      "city": "海东",
+      "province": "青海省",
+      "specialty_foods": ["狗浇尿", "背口袋"]
+    },
+    {
+      "city": "海北藏族自治州",
+      "province": "青海省",
+      "specialty_foods": ["手抓羊肉", "酥油茶"]
+    },
+    {
+      "city": "黄南藏族自治州",
+      "province": "青海省",
+      "specialty_foods": ["糌粑", "酥油茶"]
+    },
+    {
+      "city": "海南藏族自治州",
+      "province": "青海省",
+      "specialty_foods": ["酥油茶", "糌粑"]
+    },
+    {
+      "city": "果洛藏族自治州",
+      "province": "青海省",
+      "specialty_foods": ["牦牛肉", "酥油茶"]
+    },
+    {
+      "city": "玉树藏族自治州",
+      "province": "青海省",
+      "specialty_foods": ["风干牦牛肉", "酥油茶"]
+    },
+    {
+      "city": "海西蒙古族藏族自治州",
+      "province": "青海省",
+      "specialty_foods": ["手抓羊肉", "奶茶"]
+    },
+    {
+      "city": "银川",
+      "province": "宁夏回族自治区",
+      "specialty_foods": ["手抓羊肉", "羊杂碎", "羊肉泡馍", "面旗子"]
+    },
+    {
+      "city": "石嘴山",
+      "province": "宁夏回族自治区",
+      "specialty_foods": ["炒糊饽"]
+    },
+    {
+      "city": "吴忠",
+      "province": "宁夏回族自治区",
+      "specialty_foods": ["盐池滩羊", "手抓羊肉"]
+    },
+    {
+      "city": "固原",
+      "province": "宁夏回族自治区",
+      "specialty_foods": ["羊肉泡馍", "燕麦柔柔"]
+    },
+    {
+      "city": "中卫",
+      "province": "宁夏回族自治区",
+      "specialty_foods": ["蒿子面", "炒糊饽"]
+    },
+    {
+      "city": "乌鲁木齐",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["大盘鸡", "羊肉串", "抓饭", "拉条子", "馕"]
+    },
+    {
+      "city": "克拉玛依",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["烤羊肉", "抓饭"]
+    },
+    {
+      "city": "吐鲁番",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["葡萄干", "拉条子"]
+    },
+    {
+      "city": "哈密",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["哈密瓜", "烤全羊"]
+    },
+    {
+      "city": "昌吉回族自治州",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["回族油香", "烤羊肉"]
+    },
+    {
+      "city": "博尔塔拉蒙古自治州",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["手抓肉", "奶茶"]
+    },
+    {
+      "city": "巴音郭楞蒙古自治州",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["烤全羊", "香梨"]
+    },
+    {
+      "city": "阿克苏地区",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["大盘鸡", "薄皮核桃"]
+    },
+    {
+      "city": "克孜勒苏柯尔克孜自治州",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["抓饭", "烤包子"]
+    },
+    {
+      "city": "喀什地区",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["馕坑肉", "烤包子", "拉条子"]
+    },
+    {
+      "city": "和田地区",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["烤全羊", "玉石"]
+    },
+    {
+      "city": "伊犁哈萨克自治州",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["马肉", "奶茶", "熏马肠"]
+    },
+    {
+      "city": "塔城地区",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["风干牛肉", "奶茶"]
+    },
+    {
+      "city": "阿勒泰地区",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["烤狗鱼", "奶茶"]
+    },
+    {
+      "city": "石河子",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["大盘鸡", "拉条子"]
+    },
+    {
+      "city": "阿拉尔",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["羊肉串"]
+    },
+    {
+      "city": "图木舒克",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["抓饭"]
+    },
+    {
+      "city": "五家渠",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["拉条子"]
+    },
+    {
+      "city": "北屯",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": ["烤羊肉"]
+    },
+    {
+      "city": "铁门关",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": []
+    },
+    {
+      "city": "双河",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": []
+    },
+    {
+      "city": "可克达拉",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": []
+    },
+    {
+      "city": "昆玉",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": []
+    },
+    {
+      "city": "胡杨河",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": []
+    },
+    {
+      "city": "新星",
+      "province": "新疆维吾尔自治区",
+      "specialty_foods": []
+    },
+    {
+      "city": "香港",
+      "province": "香港特别行政区",
+      "specialty_foods": ["港式奶茶", "菠萝包", "云吞面", "烧腊", "蛋挞", "车仔面"]
+    },
+    {
+      "city": "澳门",
+      "province": "澳门特别行政区",
+      "specialty_foods": ["葡式蛋挞", "猪扒包", "水蟹粥", "马介休"]
+    },
+    {
+      "city": "台北",
+      "province": "台湾省",
+      "specialty_foods": ["牛肉面", "卤肉饭", "鸡排", "珍珠奶茶", "肉圆"]
+    },
+    {
+      "city": "高雄",
+      "province": "台湾省",
+      "specialty_foods": ["海鲜", "旗津海产", "六合夜市小吃"]
+    },
+    {
+      "city": "台中",
+      "province": "台湾省",
+      "specialty_foods": ["太阳饼", "凤梨酥", "珍珠奶茶"]
+    },
+    {
+      "city": "台南",
+      "province": "台湾省",
+      "specialty_foods": ["担仔面", "棺材板", "虱目鱼", "牛肉汤"]
+    }
+  ]
+}

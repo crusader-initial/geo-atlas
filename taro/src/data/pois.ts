@@ -2,7 +2,7 @@ export interface POI {
   name: string;
   type: 'transport' | 'landmark' | 'nature';
   coordinates: [number, number];
-  regionCode: string;
+  regionCode?: string; // 可选：省级/区域 POI 有，城市 POI 转换结果可无
 }
 
 export const POIS: POI[] = [

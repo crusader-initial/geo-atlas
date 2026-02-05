@@ -1,15 +1,21 @@
 import { View, Text, Button } from '@tarojs/components';
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { MapCanvas, ViewMode } from '../../components/MapCanvas';
 import { getPOIsByRegion } from '../../data/pois';
 import { getFoodsByProvince, getFoodsByCity } from '../../data/allFoods';
+import { getPOIsByCityName, convertCityPOIsToMapPOIs } from '../../data/cityPois';
 import { useMapLevel } from '../../hooks/useMapLevel';
 import './index.scss';
 
 const typeLabel: Record<string, string> = {
   transport: '交通枢纽',
   landmark: '地标',
-  nature: '自然景观'
+  nature: '自然景观',
+  景点: '景点',
+  火车站: '火车站',
+  机场: '机场',
+  购物: '购物',
+  美食: '美食'
 };
 
 const viewModeLabels: Record<ViewMode, string> = {
@@ -18,6 +24,19 @@ const viewModeLabels: Record<ViewMode, string> = {
   food: '显示美食',
   outline: '轮廓模式'
 };
+const normalizeRegionCode = (code: string | undefined) => {
+  if (!code) return '';
+  if (code.length === 2) return `${code}0000`;
+  if (code.length === 4) return `${code}00`;
+  return code;
+};
+
+const isMunicipality = (name: string) => {
+  const municipalities = ['北京', '上海', '天津', '重庆', '北京市', '上海市', '天津市', '重庆市'];
+  return municipalities.some(m => name.includes(m));
+};
+
+
 
 export default function Index() {
   const {
@@ -32,6 +51,19 @@ export default function Index() {
 
   const [selectedRegion, setSelectedRegion] = useState<any>(null);
   const [viewMode, setViewMode] = useState<ViewMode>('name');
+  const shouldShowCityPOI =
+    currentLevel === 'city' ||
+    (currentLevel === 'province' && isMunicipality(currentRegionName));
+
+
+  // 进入城市级别时自动切换到POI模式
+  useEffect(() => {
+    if (shouldShowCityPOI) {
+      setViewMode('poi');
+    } else {
+      setViewMode('name');
+    }
+  }, [shouldShowCityPOI]);
 
   const handleRegionClick = (feature: any) => {
     const id = feature.properties?.id || feature.properties?.code || feature.properties?.adcode;
@@ -51,8 +83,20 @@ export default function Index() {
   const regionPOIs = useMemo(() => {
     if (!selectedRegion) return [];
     const id = selectedRegion.properties?.id || selectedRegion.properties?.code || selectedRegion.properties?.adcode;
-    return id ? getPOIsByRegion(id) : [];
+    const normalizedId = normalizeRegionCode(id);
+    return normalizedId ? getPOIsByRegion(normalizedId) : [];
   }, [selectedRegion]);
+
+  // 城市级POI数据（用于在进入城市地图时显示景点）
+  const cityPOIs = useMemo(() => {
+    // 如果不是城市级别，并且不是直辖市的province级别，就不显示POI
+    if (!shouldShowCityPOI) return [];
+    
+    // 使用currentRegionName作为城市名称获取POI数据
+    const cityPoisData = getPOIsByCityName(currentRegionName);
+    console.log('Loading POIs for:', currentRegionName, 'Found:', cityPoisData.length);
+    return convertCityPOIsToMapPOIs(cityPoisData);
+  }, [currentLevel, currentRegionName, shouldShowCityPOI]);
 
   const regionFoods = useMemo(() => {
     if (!selectedRegion) return [];
@@ -96,7 +140,7 @@ export default function Index() {
               selectedRegion?.properties?.code ||
               selectedRegion?.properties?.adcode
             }
-            pois={regionPOIs}
+            pois={shouldShowCityPOI ? cityPOIs : regionPOIs}
             currentRegionName={currentRegionName}
           />
         </View>
@@ -128,7 +172,7 @@ export default function Index() {
                     {regionPOIs.map((poi, index) => (
                       <View key={`${poi.name}-${index}`} className="poi-item">
                         <Text className="poi-name">{poi.name}</Text>
-                        <Text className="poi-type">{typeLabel[poi.type]}</Text>
+                        <Text className="poi-type">{typeLabel[poi.type] || poi.type}</Text>
                       </View>
                     ))}
                   </View>
@@ -157,6 +201,21 @@ export default function Index() {
               >
                 深入探索
               </Button>
+            </View>
+          ) : shouldShowCityPOI && cityPOIs.length > 0 ? (
+            <View className="info-card">
+              <Text className="region-name">{currentRegionName}</Text>
+              <View className="poi-section">
+                <Text className="section-title">城市景点 ({cityPOIs.length}个)</Text>
+                <View className="poi-list" style={{ maxHeight: '400px', overflowY: 'auto' }}>
+                  {cityPOIs.map((poi, index) => (
+                    <View key={`${poi.name}-${index}`} className="poi-item">
+                      <Text className="poi-name">{poi.name}</Text>
+                      <Text className="poi-type">{typeLabel[poi.type] || poi.type}</Text>
+                    </View>
+                  ))}
+                </View>
+              </View>
             </View>
           ) : (
             <View className="empty-state">

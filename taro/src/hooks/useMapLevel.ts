@@ -58,9 +58,10 @@ export const useMapLevel = () => {
           regionName: name
         });
       } else if (currentState.level === 'province') {
+        const cityCode = id.length === 4 ? `${id}00` : id;
         navigateTo({
           level: 'city',
-          dataUrl: `/data/china/geometryCouties/${id}.json`,
+          dataUrl: `/data/china/geometryCouties/${cityCode}.json`,
           parentId: 'province',
           regionName: name
         });
