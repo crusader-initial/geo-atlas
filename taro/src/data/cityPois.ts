@@ -1,4 +1,4 @@
-import cityPoisData from './china_cities_poi.json';
+import { loadJsonFromCloud } from '../utils/mapData';
 
 export interface CityPOI {
   name: string;
@@ -20,20 +20,28 @@ export interface CityPOICollection {
   cities: CityPOIData[];
 }
 
-// 类型断言数据
-const poisCollection = cityPoisData as CityPOICollection;
+const CLOUD_POI_PATH = 'data/poi/china_cities_poi_merged.json';
+
+let poisCollectionCache: CityPOICollection | null = null;
+
+/** 从云存储加载 POI 数据，仅需调用一次（如页面 onLoad 时）；后续 getPOIsByCityName 等会使用缓存 */
+export const loadCityPoisCollection = async (): Promise<CityPOICollection> => {
+  if (poisCollectionCache) return poisCollectionCache;
+  poisCollectionCache = await loadJsonFromCloud<CityPOICollection>(CLOUD_POI_PATH);
+  return poisCollectionCache;
+};
 
 /**
  * 根据城市名称获取该城市的POI数据
  * @param cityName 城市名称，如"北京"、"上海"
- * @returns 该城市的POI数组，如果找不到则返回空数组
+ * @returns 该城市的POI数组，如果未加载或找不到则返回空数组
  */
 export const getPOIsByCityName = (cityName: string): CityPOI[] => {
-  if (!cityName) return [];
+  if (!cityName || !poisCollectionCache) return [];
 
   const normalizedName = normalizeCityName(cityName);
 
-  const cityData = poisCollection.cities.find(
+  const cityData = poisCollectionCache.cities.find(
     city => city.city === normalizedName || city.city === cityName
   );
 
@@ -85,7 +93,7 @@ export const convertCityPOIsToMapPOIs = (cityPois: CityPOI[]) => {
  * @returns 城市名称数组
  */
 export const getAllCities = (): string[] => {
-  return poisCollection.cities.map(city => city.city);
+  return poisCollectionCache ? poisCollectionCache.cities.map(city => city.city) : [];
 };
 
 /**
@@ -94,8 +102,9 @@ export const getAllCities = (): string[] => {
  * @returns 该省份下的城市数组
  */
 export const getCitiesByProvince = (provinceName: string): CityPOIData[] => {
+  if (!poisCollectionCache) return [];
   const normalized = stripSuffixes(provinceName, ['省', '市', '自治区', '特别行政区']);
-  return poisCollection.cities.filter(city => {
+  return poisCollectionCache.cities.filter(city => {
     const cityProvince = city.province;
     const normalizedCityProvince = stripSuffixes(cityProvince, ['省', '市', '自治区', '特别行政区']);
     return cityProvince === provinceName || normalizedCityProvince === normalized;

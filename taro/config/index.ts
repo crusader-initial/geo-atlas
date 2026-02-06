@@ -1,4 +1,7 @@
 import { defineConfig } from '@tarojs/cli';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
 
 export default defineConfig(async () => {
   return {
@@ -14,7 +17,15 @@ export default defineConfig(async () => {
     outputRoot: 'dist',
     plugins: ['@tarojs/plugin-framework-react'],
     framework: 'react',
-    compiler: 'webpack5',
+    compiler: {
+      type: 'webpack5',
+      prebundle: {
+        enable: false
+      }
+    },
+    alias: {
+      '@tarojs/shared': require.resolve('@tarojs/shared')
+    },
     mini: {
       postcss: {
         pxtransform: {

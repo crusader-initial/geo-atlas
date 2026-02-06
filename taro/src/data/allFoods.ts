@@ -1,4 +1,4 @@
-import cityFoodsData from './city_foods_complete.json';
+import { loadJsonFromCloud } from '../utils/mapData';
 
 export interface CityFood {
   cityName: string;
@@ -12,48 +12,49 @@ export interface ProvinceFood {
   cities: CityFood[];
 }
 
-// 将 JSON 数据按省份分组
-function groupByProvince(): Record<string, ProvinceFood> {
+interface CityFoodsRaw {
+  cities: { province: string; city: string; specialty_foods: string[] }[];
+}
+
+const CLOUD_FOOD_PATH = 'data/food/city_foods_complete.json';
+
+function groupByProvince(data: CityFoodsRaw): Record<string, ProvinceFood> {
   const provinceMap: Record<string, ProvinceFood> = {};
-
-  cityFoodsData.cities.forEach(item => {
+  data.cities.forEach(item => {
     const provinceName = item.province;
-    
     if (!provinceMap[provinceName]) {
-      provinceMap[provinceName] = {
-        provinceName: provinceName,
-        cities: []
-      };
+      provinceMap[provinceName] = { provinceName, cities: [] };
     }
-
-    // 保留所有美食
     provinceMap[provinceName].cities.push({
       cityName: item.city,
       foods: item.specialty_foods
     });
   });
-
   return provinceMap;
 }
 
-// 生成所有省份美食数据
-export const allProvinceFoods = groupByProvince();
+let allProvinceFoodsCache: Record<string, ProvinceFood> | null = null;
+
+/** 从云存储加载美食数据，仅需调用一次；后续 getFoodsByProvince 等会使用缓存 */
+export const loadCityFoodsCollection = async (): Promise<Record<string, ProvinceFood>> => {
+  if (allProvinceFoodsCache) return allProvinceFoodsCache;
+  const raw = await loadJsonFromCloud<CityFoodsRaw>(CLOUD_FOOD_PATH);
+  allProvinceFoodsCache = groupByProvince(raw);
+  return allProvinceFoodsCache;
+};
 
 // 根据省份名称或代码获取美食数据
 export const getFoodsByProvince = (provinceNameOrCode: string): ProvinceFood | null => {
-  // 直接查找省份名称
-  if (allProvinceFoods[provinceNameOrCode]) {
-    return allProvinceFoods[provinceNameOrCode];
+  if (!allProvinceFoodsCache) return null;
+  if (allProvinceFoodsCache[provinceNameOrCode]) {
+    return allProvinceFoodsCache[provinceNameOrCode];
   }
-  
-  // 尝试添加"省"后缀查找
   if (!provinceNameOrCode.includes('省') && !provinceNameOrCode.includes('市')) {
     const withSuffix = provinceNameOrCode + '省';
-    if (allProvinceFoods[withSuffix]) {
-      return allProvinceFoods[withSuffix];
+    if (allProvinceFoodsCache[withSuffix]) {
+      return allProvinceFoodsCache[withSuffix];
     }
   }
-  
   return null;
 };
 
@@ -69,7 +70,7 @@ export const getFoodsByCity = (provinceFoods: ProvinceFood, cityName: string): C
 
 // 获取所有省份名称列表
 export const getAllProvinceNames = (): string[] => {
-  return Object.keys(allProvinceFoods);
+  return allProvinceFoodsCache ? Object.keys(allProvinceFoodsCache) : [];
 };
 
 // 获取某个省份的所有城市

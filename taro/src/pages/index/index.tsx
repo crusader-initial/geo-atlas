@@ -2,8 +2,8 @@ import { View, Text, Button } from '@tarojs/components';
 import { useMemo, useState, useEffect } from 'react';
 import { MapCanvas, ViewMode } from '../../components/MapCanvas';
 import { getPOIsByRegion } from '../../data/pois';
-import { getFoodsByProvince, getFoodsByCity } from '../../data/allFoods';
-import { getPOIsByCityName, convertCityPOIsToMapPOIs } from '../../data/cityPois';
+import { loadCityPoisCollection, getPOIsByCityName, convertCityPOIsToMapPOIs } from '../../data/cityPois';
+import { loadCityFoodsCollection, getFoodsByProvince, getFoodsByCity } from '../../data/allFoods';
 import { useMapLevel } from '../../hooks/useMapLevel';
 import './index.scss';
 
@@ -51,6 +51,14 @@ export default function Index() {
 
   const [selectedRegion, setSelectedRegion] = useState<any>(null);
   const [viewMode, setViewMode] = useState<ViewMode>('name');
+  const [dataReady, setDataReady] = useState(false);
+
+  useEffect(() => {
+    Promise.all([loadCityPoisCollection(), loadCityFoodsCollection()])
+      .then(() => setDataReady(true))
+      .catch(err => console.error('Failed to load POI/food data:', err));
+  }, []);
+
   const shouldShowCityPOI =
     currentLevel === 'city' ||
     (currentLevel === 'province' && isMunicipality(currentRegionName));
@@ -89,23 +97,19 @@ export default function Index() {
 
   // 城市级POI数据（用于在进入城市地图时显示景点）
   const cityPOIs = useMemo(() => {
-    // 如果不是城市级别，并且不是直辖市的province级别，就不显示POI
-    if (!shouldShowCityPOI) return [];
-    
-    // 使用currentRegionName作为城市名称获取POI数据
+    if (!dataReady || !shouldShowCityPOI) return [];
     const cityPoisData = getPOIsByCityName(currentRegionName);
-    console.log('Loading POIs for:', currentRegionName, 'Found:', cityPoisData.length);
     return convertCityPOIsToMapPOIs(cityPoisData);
-  }, [currentLevel, currentRegionName, shouldShowCityPOI]);
+  }, [dataReady, currentLevel, currentRegionName, shouldShowCityPOI]);
 
   const regionFoods = useMemo(() => {
-    if (!selectedRegion) return [];
+    if (!dataReady || !selectedRegion) return [];
     const provinceFoods = getFoodsByProvince(currentRegionName);
     if (!provinceFoods) return [];
     const cityName = selectedRegion.properties?.name || '';
     const cityFood = getFoodsByCity(provinceFoods, cityName);
     return cityFood ? cityFood.foods : [];
-  }, [selectedRegion, currentRegionName]);
+  }, [dataReady, selectedRegion, currentRegionName]);
 
   return (
     <View className="page">
