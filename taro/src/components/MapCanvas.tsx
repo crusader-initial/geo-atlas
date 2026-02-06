@@ -41,10 +41,19 @@ export const MapCanvas = ({
   const [scale, setScale] = useState(1);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   
-  // 鼠标拖拽状态
+  // 鼠标/单指拖拽状态
   const isDraggingRef = useRef(false);
   const lastMousePosRef = useRef<{ x: number; y: number } | null>(null);
   const hasDraggedRef = useRef(false);
+
+  // 双指捏合缩放状态
+  const isPinchingRef = useRef(false);
+  const pinchStartRef = useRef<{
+    distance: number;
+    center: { x: number; y: number };
+    scale: number;
+    offset: { x: number; y: number };
+  } | null>(null);
 
   useReady(() => {
     const query = Taro.createSelectorQuery();
@@ -319,47 +328,82 @@ export const MapCanvas = ({
 
   // 缩放控制函数
   const handleZoomIn = () => {
-    setScale(prev => Math.min(prev + 0.2, 5));
+    setScale(prev => Math.min(prev + 0.2, 7));
   };
 
   const handleZoomOut = () => {
     setScale(prev => Math.max(prev - 0.2, 1));
   };
 
-  // 触摸/鼠标拖拽事件处理
+  const getTouchPos = useCallback((touch: any) => ({
+    x: touch.clientX ?? touch.pageX ?? touch.x ?? 0,
+    y: touch.clientY ?? touch.pageY ?? touch.y ?? 0
+  }), []);
+
+  const getPinchDistance = useCallback((t0: { x: number; y: number }, t1: { x: number; y: number }) => {
+    return Math.hypot(t1.x - t0.x, t1.y - t0.y) || 1;
+  }, []);
+
+  const getPinchCenter = useCallback((t0: { x: number; y: number }, t1: { x: number; y: number }) => ({
+    x: (t0.x + t1.x) / 2,
+    y: (t0.y + t1.y) / 2
+  }), []);
+
+  // 触摸/鼠标拖拽与双指缩放事件处理
   const handleDragStart = useCallback((event: any) => {
     event.stopPropagation();
     const touches = event.touches || [];
-    if (touches.length === 1) {
+    if (touches.length === 2) {
+      isPinchingRef.current = true;
+      isDraggingRef.current = false;
+      const p0 = getTouchPos(touches[0]);
+      const p1 = getTouchPos(touches[1]);
+      pinchStartRef.current = {
+        distance: getPinchDistance(p0, p1),
+        center: getPinchCenter(p0, p1),
+        scale,
+        offset: { ...offset }
+      };
+    } else if (touches.length === 1) {
+      isPinchingRef.current = false;
       isDraggingRef.current = true;
       hasDraggedRef.current = false;
-      const touch = touches[0];
-      // 尝试多种方式获取坐标
-      const x = touch.clientX ?? touch.pageX ?? touch.x ?? 0;
-      const y = touch.clientY ?? touch.pageY ?? touch.y ?? 0;
-      lastMousePosRef.current = { x, y };
-      console.log('开始拖拽，初始位置:', x, y);
+      lastMousePosRef.current = getTouchPos(touches[0]);
     }
-  }, []);
+  }, [scale, offset, getTouchPos, getPinchDistance, getPinchCenter]);
 
   const handleDragMove = useCallback((event: any) => {
-    if (!isDraggingRef.current || !lastMousePosRef.current) return;
-    
     event.stopPropagation();
     event.preventDefault();
-    
+
     const touches = event.touches || [];
-    if (touches.length !== 1) return;
+
+    // 双指捏合缩放
+    if (isPinchingRef.current && touches.length === 2) {
+      const start = pinchStartRef.current;
+      if (!start) return;
+      const p0 = getTouchPos(touches[0]);
+      const p1 = getTouchPos(touches[1]);
+      const curDist = getPinchDistance(p0, p1);
+      const curCenter = getPinchCenter(p0, p1);
+      const ratio = curDist / start.distance;
+      const newScale = Math.min(7, Math.max(1, start.scale * ratio));
+      // 使捏合中心对应的地图点保持不动
+      const newOffsetX = curCenter.x - (start.center.x - start.offset.x) * (newScale / start.scale);
+      const newOffsetY = curCenter.y - (start.center.y - start.offset.y) * (newScale / start.scale);
+      setScale(newScale);
+      setOffset({ x: newOffsetX, y: newOffsetY });
+      return;
+    }
+
+    // 单指拖拽
+    if (!isDraggingRef.current || !lastMousePosRef.current || touches.length !== 1) return;
 
     const touch = touches[0];
-    // 尝试多种方式获取坐标
-    const currentX = touch.clientX ?? touch.pageX ?? touch.x ?? 0;
-    const currentY = touch.clientY ?? touch.pageY ?? touch.y ?? 0;
-    
-    const dx = currentX - lastMousePosRef.current.x;
-    const dy = currentY - lastMousePosRef.current.y;
+    const current = getTouchPos(touch);
+    const dx = current.x - lastMousePosRef.current.x;
+    const dy = current.y - lastMousePosRef.current.y;
 
-    // 只有移动超过一定距离才算拖拽
     if (Math.abs(dx) > 2 || Math.abs(dy) > 2) {
       hasDraggedRef.current = true;
     }
@@ -369,14 +413,20 @@ export const MapCanvas = ({
       y: prev.y + dy
     }));
 
-    lastMousePosRef.current = { x: currentX, y: currentY };
-  }, []);
+    lastMousePosRef.current = current;
+  }, [getTouchPos, getPinchDistance, getPinchCenter]);
 
   const handleDragEnd = useCallback((event: any) => {
     event.stopPropagation();
-    console.log('结束拖拽');
-    isDraggingRef.current = false;
-    lastMousePosRef.current = null;
+    const touches = event.touches || [];
+    if (touches.length < 2) {
+      isPinchingRef.current = false;
+      pinchStartRef.current = null;
+    }
+    if (touches.length === 0) {
+      isDraggingRef.current = false;
+      lastMousePosRef.current = null;
+    }
   }, []);
 
   return (
@@ -399,7 +449,7 @@ export const MapCanvas = ({
       
       {/* 地图控制按钮 */}
       <View className="map-controls">
-        <Button className="control-button" onClick={handleZoomIn} disabled={scale >= 5}>
+        <Button className="control-button" onClick={handleZoomIn} disabled={scale >= 7}>
           +
         </Button>
         <Button className="control-button" onClick={handleZoomOut} disabled={scale <= 1}>
