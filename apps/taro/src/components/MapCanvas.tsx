@@ -36,6 +36,19 @@ export const MapCanvas = ({
   const [loading, setLoading] = useState(true);
   const [size, setSize] = useState({ width: 0, height: 0 });
 
+  // Animation and interaction state
+  const currentTransform = useRef({ k: 1, x: 0, y: 0 });
+  const animationFrameId = useRef<number | null>(null);
+  const isDragging = useRef(false);
+  const lastTouch = useRef({ x: 0, y: 0 });
+  const touchStartPos = useRef({ x: 0, y: 0 });
+  const hasMoved = useRef(false);
+  const lastGeoData = useRef<FeatureCollection | null>(null);
+
+  const easeInOutCubic = (t: number): number => {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  };
+
   useReady(() => {
     const query = Taro.createSelectorQuery();
     query
@@ -83,15 +96,18 @@ export const MapCanvas = ({
     };
   }, [dataUrl]);
 
-  const drawMap = useCallback(() => {
+  const renderFrame = useCallback((transform: { k: number, x: number, y: number }) => {
     if (!geoData || !contextRef.current || size.width === 0 || size.height === 0) return;
 
     const ctx = contextRef.current;
     ctx.clearRect(0, 0, size.width, size.height);
 
-    const projection = d3Geo.geoMercator().fitSize([size.width, size.height], geoData);
-    const pathGenerator = d3Geo.geoPath(projection, ctx);
+    const projection = d3Geo.geoMercator()
+      .scale(transform.k)
+      .translate([transform.x, transform.y]);
+    
     projectionRef.current = projection;
+    const pathGenerator = d3Geo.geoPath(projection, ctx);
     pathRef.current = pathGenerator;
 
     geoData.features.forEach(feature => {
@@ -100,21 +116,21 @@ export const MapCanvas = ({
 
       ctx.beginPath();
       pathGenerator(feature as any);
-      ctx.fillStyle = isSelected ? '#111111' : '#ffffff';
-      ctx.strokeStyle = '#333333';
-      ctx.lineWidth = 0.6;
+      // Theme colors - Soft Light
+      ctx.fillStyle = isSelected ? '#BAE6FD' : '#FFFFFF'; // Sky 200 (Selected) : White (Default)
+      ctx.strokeStyle = '#CBD5E1'; // Slate 300 (Soft Grey Stroke)
+      ctx.lineWidth = 0.8;
       ctx.fill();
       ctx.stroke();
 
       const centroid = pathGenerator.centroid(feature as any);
       if (centroid && Number.isFinite(centroid[0]) && Number.isFinite(centroid[1])) {
-        ctx.fillStyle = isSelected ? '#ffffff' : '#333333';
-        ctx.font = '10px sans-serif';
+        ctx.fillStyle = isSelected ? '#0369A1' : '#64748B'; // Sky 700 : Slate 500
+        ctx.font = isSelected ? 'bold 12px sans-serif' : '10px sans-serif';
         let text = '';
         if (viewMode === 'name') {
           text = feature.properties?.name || '';
         } else if (viewMode === 'food') {
-          // TODO: Fetch food data from properties or external source
           text = feature.properties?.food || '';
         }
 
@@ -129,8 +145,8 @@ export const MapCanvas = ({
         const point = projectionRef.current?.(poi.coordinates);
         if (!point) return;
         ctx.beginPath();
-        ctx.fillStyle = '#1b1b1b';
-        ctx.strokeStyle = '#ffffff';
+        ctx.fillStyle = '#F43F5E'; // Rose 500
+        ctx.strokeStyle = '#FFFFFF';
         ctx.lineWidth = 2;
         ctx.arc(point[0], point[1], 5, 0, Math.PI * 2);
         ctx.fill();
@@ -140,30 +156,175 @@ export const MapCanvas = ({
   }, [geoData, pois, selectedRegionId, size.height, size.width, viewMode]);
 
   useEffect(() => {
-    drawMap();
-  }, [drawMap, level]);
+    if (!geoData || size.width === 0 || size.height === 0) return;
+
+    let targetFeature: any = geoData;
+    let usePadding = false;
+
+    if (selectedRegionId) {
+      const feature = geoData.features.find(f => {
+        const id = f.properties?.id || f.properties?.code || f.properties?.adcode || f.id;
+        return id === selectedRegionId;
+      });
+      if (feature) {
+        targetFeature = feature;
+        usePadding = true;
+      }
+    }
+
+    const tempProjection = d3Geo.geoMercator();
+    if (usePadding) {
+      const padding = Math.min(size.width, size.height) * 0.1;
+      tempProjection.fitExtent(
+        [
+          [padding, padding],
+          [size.width - padding, size.height - padding]
+        ],
+        targetFeature
+      );
+
+      // Limit max zoom level for small regions (like Beijing, Hong Kong)
+      // Calculate global scale for reference
+      const globalProjection = d3Geo.geoMercator();
+      globalProjection.fitSize([size.width, size.height], geoData);
+      const globalScale = globalProjection.scale();
+      const maxScale = globalScale * 8; // Limit to 8x zoom
+      
+      if (tempProjection.scale() > maxScale) {
+        const currentScale = maxScale;
+        tempProjection.scale(currentScale);
+
+        // Re-center the projection
+        // We calculate the center of the target feature in the unit projection (scale=1, translate=[0,0])
+        // and then calculate the required translation to center it in the view
+        const unitProjection = d3Geo.geoMercator().scale(1).translate([0, 0]);
+        const path = d3Geo.geoPath().projection(unitProjection);
+        const bounds = path.bounds(targetFeature);
+        
+        if (bounds) {
+          const centerX = (bounds[0][0] + bounds[1][0]) / 2;
+          const centerY = (bounds[0][1] + bounds[1][1]) / 2;
+          
+          const tx = size.width / 2 - currentScale * centerX;
+          const ty = size.height / 2 - currentScale * centerY;
+          
+          tempProjection.translate([tx, ty]);
+        }
+      }
+    } else {
+      tempProjection.fitSize([size.width, size.height], targetFeature);
+    }
+
+    const targetTransform = {
+      k: tempProjection.scale(),
+      x: tempProjection.translate()[0],
+      y: tempProjection.translate()[1]
+    };
+
+    if (animationFrameId.current) {
+      // @ts-ignore
+      cancelAnimationFrame(animationFrameId.current);
+      animationFrameId.current = null;
+    }
+
+    const startTransform = { ...currentTransform.current };
+    const isDataChanged = geoData !== lastGeoData.current;
+    lastGeoData.current = geoData;
+
+    // Jump directly if data changed or first render
+    if (isDataChanged || (startTransform.k === 1 && startTransform.x === 0 && startTransform.y === 0)) {
+      currentTransform.current = targetTransform;
+      renderFrame(targetTransform);
+      return;
+    }
+
+    const startTime = Date.now();
+    const duration = 500; // ms
+
+    const animate = () => {
+      const now = Date.now();
+      const progress = Math.min((now - startTime) / duration, 1);
+      const t = easeInOutCubic(progress);
+
+      const next = {
+        k: startTransform.k + (targetTransform.k - startTransform.k) * t,
+        x: startTransform.x + (targetTransform.x - startTransform.x) * t,
+        y: startTransform.y + (targetTransform.y - startTransform.y) * t
+      };
+
+      currentTransform.current = next;
+      renderFrame(next);
+
+      if (progress < 1) {
+        // @ts-ignore
+        animationFrameId.current = requestAnimationFrame(animate);
+      } else {
+        animationFrameId.current = null;
+      }
+    };
+
+    // @ts-ignore
+    animationFrameId.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrameId.current) {
+        // @ts-ignore
+        cancelAnimationFrame(animationFrameId.current);
+      }
+    };
+  }, [geoData, selectedRegionId, size, renderFrame]);
+
+  const handleTouchStart = useCallback((event: any) => {
+    isDragging.current = true;
+    hasMoved.current = false;
+    const touch = event.touches[0];
+    if (touch) {
+      lastTouch.current = { x: touch.x, y: touch.y };
+      touchStartPos.current = { x: touch.x, y: touch.y };
+    }
+    if (animationFrameId.current) {
+      // @ts-ignore
+      cancelAnimationFrame(animationFrameId.current);
+      animationFrameId.current = null;
+    }
+  }, []);
+
+  const handleTouchMove = useCallback((event: any) => {
+    if (!isDragging.current) return;
+    const touch = event.touches[0];
+    if (!touch) return;
+
+    const dx = touch.x - lastTouch.current.x;
+    const dy = touch.y - lastTouch.current.y;
+    
+    if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
+      hasMoved.current = true;
+    }
+
+    currentTransform.current.x += dx;
+    currentTransform.current.y += dy;
+    lastTouch.current = { x: touch.x, y: touch.y };
+
+    renderFrame(currentTransform.current);
+  }, [renderFrame]);
+
+  const handleTouchEnd = useCallback(() => {
+    isDragging.current = false;
+  }, []);
 
   const handleTap = useCallback(
     (event: any) => {
+      if (hasMoved.current) return;
       if (!geoData || !contextRef.current || !pathRef.current) return;
 
       let x, y;
-      // Handle Mini Program Canvas 2D touch coordinates
       const touch = event.changedTouches?.[0];
       const dpr = dprRef.current;
       
       if (touch && typeof touch.x === 'number' && typeof touch.y === 'number') {
-        // 小程序 Canvas 2D 环境下，touch.x/y 通常是 CSS 逻辑像素
-        // 而 Canvas 上下文已经 scale(dpr, dpr)，路径也是基于物理像素绘制的（在内部）
-        // 但 isPointInPath 需要传入物理像素坐标才能正确匹配被 scale 的路径
         x = touch.x * dpr;
         y = touch.y * dpr;
       } else {
-        // Fallback for Web or other environments
-        // Web 环境下 event.detail.x/y 也是逻辑像素，可能同样需要乘以 dpr，
-        // 具体取决于 Taro 在 Web 端的实现。通常 Web Canvas 如果也做了 scale，
-        // 原生 isPointInPath 并不受当前矩阵影响，所以需要传入原始坐标？
-        // 这里暂时保持逻辑一致，如果 Web 端有问题再单独调整。
         x = (event.detail?.x || 0) * dpr;
         y = (event.detail?.y || 0) * dpr;
       }
@@ -196,6 +357,9 @@ export const MapCanvas = ({
         canvasId={CANVAS_ID}
         className="map-canvas"
         onTap={handleTap}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       />
     </View>
   );

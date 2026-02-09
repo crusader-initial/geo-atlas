@@ -96,13 +96,13 @@ export default function Index() {
             <View className="info-card">
               <Text className="region-name">{selectedRegion.properties?.name || 'Unknown Region'}</Text>
               <View className="info-grid">
-                <View>
+                <View className="info-item">
                   <Text className="info-label">编号</Text>
                   <Text className="info-value">
                     {selectedRegion.properties?.id || selectedRegion.properties?.code || 'N/A'}
                   </Text>
                 </View>
-                <View>
+                <View className="info-item">
                   <Text className="info-label">层级</Text>
                   <Text className="info-value">
                     {currentLevel === 'country' ? '省份' : currentLevel === 'province' ? '城市' : '区县'}
