@@ -4,6 +4,7 @@ import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 
 export default defineConfig(async () => {
+  const isWeapp = process.env.TARO_ENV === 'weapp';
   return {
     projectName: 'geo-atlas-taro',
     date: '2024-01-01',
@@ -57,12 +58,9 @@ export default defineConfig(async () => {
       }
     },
     copy: {
-      patterns: [
-        {
-          from: '../client/public/data',
-          to: 'dist/data'
-        }
-      ],
+      patterns: isWeapp
+        ? []
+        : [{ from: '../client/public/data', to: 'dist/data' }],
       options: {}
     }
   };
